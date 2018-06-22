@@ -1,6 +1,6 @@
-Feature: 
+Feature: Logo is present
 
-Scenario: 
+Scenario: Google logo is present
 Given 
 When
 Then
