@@ -1,6 +1,6 @@
 Feature: Logo is present
 
 Scenario: Google logo is present
-Given 
+Given I 
 When
 Then
