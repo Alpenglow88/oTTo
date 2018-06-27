@@ -1,5 +1,5 @@
 # UI_Automation
-## UI automation using Capybara, Site Prism and Cucumber in a page object model
+## UI automation using [Capybara](https://github.com/teamcapybara/capybara), [Site Prism](https://github.com/natritmeyer/site_prism) and [Cucumber](https://github.com/cucumber) in a page object model
 
 Tests are written in Gherkins stored in _.feature_ files stored in the support sub folder. The test steps are described in the step definitions.
 Tests are run with
