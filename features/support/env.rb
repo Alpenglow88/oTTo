@@ -13,8 +13,8 @@ require 'site_prism'
 $LOAD_PATH << './lib'
 $LOAD_PATH << './pages'
 
-require './pages/player_page'
-require './features/pages'
+require './pages/home_page'
+
 
 
 Capybara.configure do |config|
@@ -36,5 +36,5 @@ end
 private
 
 def browser
-  @browser ||= ENV.fetch('browser', 'firefox').to_sym
+  @browser ||= ENV.fetch('browser', 'chrome' ).to_sym
 end

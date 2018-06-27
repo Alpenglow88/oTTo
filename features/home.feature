@@ -1,4 +1,4 @@
-Feature: Play button
+Feature: Home Page
 
 I want to see the play button displayed in the player window
 
@@ -12,4 +12,10 @@ Scenario: the main_logo is visible
     Then the main_logo is visible
 
 Scenario: the search_entry_field is visible
-    Then the search_entry_field is visible
+    Then the search_entry_field is visible  
+
+Scenario: the search_btn is visible
+    Then the search_btn is visible
+
+Scenario: I feel lucky
+    Then the feel_lucky_btn is visible
