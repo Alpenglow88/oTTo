@@ -1,5 +1,12 @@
-Feature: Play button is present
+Feature: Play button
 
-Scenario: Play button is present
-When I navigate to the home page 
-Then the play_button is present
+I want to see the play button displayed in the player window
+
+Background:
+    When I navigate to the home page
+
+Scenario: I am on the home page
+    Then I am on the home page
+
+Scenario: the main_logo is visible
+    Then the main_logo is visible
