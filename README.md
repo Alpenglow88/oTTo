@@ -1,17 +1,23 @@
 # UI_Automation
-UI automation using Capybara, Site Prism and Cucumber in a page object model
+## UI automation using Capybara, Site Prism and Cucumber in a page object model
 
-Tests are written in Gherkins stored in .feature files stored in the support sub folder and the test steps are descripted in the step definitions.
+Tests are written in Gherkins stored in _.feature_ files stored in the support sub folder. The test steps are described in the step definitions.
+Tests are run with
 
-The env.rb file controls the environment (like a config)
-Pages are described under the 'pages' sub folder and are referenced in the env.rb file
+```ruby
+cucumber
+```
 
-Site hook aliases are defined in the hooks.rb file in support sub folder (i.e. @home)
+The _env.rb_ file controls the environment (like a config)
+
+Pages (POM) are described under the _pages_ sub folder and are referenced in the _env.rb_ file
+
+Site hook aliases are defined in the _hooks.rb_ file in support sub folder _(i.e. @home)_
 
 
 
-Code coverage is covered using 'simplecov' - work is needed to fully understand utilise this and SHOULD BE IGNORED FOR NOW
+Code coverage is covered using _'simplecov'_ - work is needed to fully understand utilise this and **SHOULD BE IGNORED FOR NOW**
 
-'dotenv' is used to stat which env.ruby file the test run will use - this is configurable 
+_'dotenv'_ is used to state which _env.rb_ file the test run will use - this is configurable 
 
 TODO: FULL README
