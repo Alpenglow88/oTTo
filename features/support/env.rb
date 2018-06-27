@@ -14,13 +14,14 @@ $LOAD_PATH << './lib'
 $LOAD_PATH << './pages'
 
 require './pages/player_page'
+require './features/pages'
 
 
 Capybara.configure do |config|
   config.default_driver = :selenium
   config.default_max_wait_time = 5
 #  config.app_host = 'file://' + File.dirname(__FILE__) + '/../../test_site/html'
-  config.app_host = "http://ampdemo.azureedge.net/azuremediaplayer.html"
+  config.app_host = "https://google.com"
   config.ignore_hidden_elements = false
 end
 
@@ -35,5 +36,5 @@ end
 private
 
 def browser
-  @browser ||= ENV.fetch('browser', 'chrome').to_sym
+  @browser ||= ENV.fetch('browser', 'firefox').to_sym
 end

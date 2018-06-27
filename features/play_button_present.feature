@@ -10,3 +10,6 @@ Scenario: I am on the home page
 
 Scenario: the main_logo is visible
     Then the main_logo is visible
+
+Scenario: the search_entry_field is visible
+    Then the search_entry_field is visible
