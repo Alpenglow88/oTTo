@@ -1,7 +1,20 @@
+unless ENV['CI']
+  require 'simplecov'
+  require 'dotenv'
+  SimpleCov.start
+  Dotenv.load('.env')
+end
+
 require 'capybara/cucumber'
 require 'capybara'
 require 'selenium-webdriver'
 require 'site_prism'
+
+$LOAD_PATH << './lib'
+$LOAD_PATH << './pages'
+
+require './pages/player_page'
+
 
 Capybara.configure do |config|
   config.default_driver = :selenium
