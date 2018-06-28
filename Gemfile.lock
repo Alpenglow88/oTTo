@@ -96,7 +96,7 @@ PLATFORMS
 
 DEPENDENCIES
   addressable (~> 2.4)
-  capybara (~> 2.12)
+  capybara (~> 2.15)
   cucumber (~> 3.1.1)
   dotenv (~> 2.2)
   rspec (~> 3.7.0)
