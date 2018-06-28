@@ -20,4 +20,8 @@ Code coverage is covered using _'simplecov'_ - work is needed to fully understan
 
 _'dotenv'_ is used to state which _env.rb_ file the test run will use - this is configurable 
 
-TODO: FULL README
+_'rubocop'_ is used to check Ruby convention practices
+
+##TODO: 
+FULL README
+Check for chrome headless support 
