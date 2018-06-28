@@ -15,13 +15,12 @@ $LOAD_PATH << './pages'
 
 require './pages/home_page'
 
-
 # change default driver between registered drivers listed below
 Capybara.configure do |config|
   config.default_driver = :headless_chrome
   config.default_max_wait_time = 5
-#  config.app_host = 'file://' + File.dirname(__FILE__) + '/../../test_site/html'
-  config.app_host = "https://google.com"
+
+  config.app_host = 'https://google.com'
   config.ignore_hidden_elements = false
 end
 
@@ -43,23 +42,20 @@ end
 
 Capybara.register_driver :headless_chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-    chromeOptions: { args: %w(headless disable-gpu) }
+    chromeOptions: { args: %w[headless disable-gpu] }
   )
-
-  Capybara::Selenium::Driver.new app,
-    browser: :chrome,
-    desired_capabilities: capabilities
+  Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: capabilities)
 end
 
 #########################################################
-##Code added for extra driver if not suported by Selenium
+## Code added for extra driver if not suported by Selenium
 
-#Capybara.register_driver :selenium do |app|
+# Capybara.register_driver :selenium do |app|
 #  Capybara::Selenium::Driver.new(app, browser: browser)
-#end
+# end
 
-#private
+# private
 
-#def browser
+# def browser
 #  @browser ||= ENV.fetch('browser', 'chrome' ).to_sym
-#end
+# end

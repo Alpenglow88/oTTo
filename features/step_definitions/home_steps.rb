@@ -1,4 +1,3 @@
-
 When('I navigate to the home page') do
   visit 'https://google.co.uk'
 end

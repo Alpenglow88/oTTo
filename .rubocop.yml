@@ -1,0 +1,23 @@
+AllCops:
+  TargetRubyVersion: 2.2
+
+Documentation:
+  Enabled: false
+
+AccessorMethodName:
+  Enabled: false
+
+TrivialAccessors:
+  Enabled: false
+
+ModuleLength:
+  Enabled: false
+
+LineLength:
+  Max: 120
+
+MethodLength:
+  Max: 11
+
+Style/RegexpLiteral:
+  Enabled: false
