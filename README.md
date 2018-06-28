@@ -22,6 +22,3 @@ _'dotenv'_ is used to state which _env.rb_ file the test run will use - this is 
 
 _'rubocop'_ is used to check Ruby convention practices
 
-##TODO: 
-FULL README
-Check for chrome headless support 
