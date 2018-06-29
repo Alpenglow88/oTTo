@@ -9,6 +9,14 @@ cucumber  --format pretty --expand --format json -o "testreport.json"
 ```
 The file name can be different but this is referenced in the .gitignore so that reports do not get pushed to the repo
 
+Once report is generated in .json format run the *report_builder.rb* using 
+
+```ruby
+ruby report_builder.rb
+```
+
+This will generate an .html test report
+
 The _env.rb_ file controls the environment (like a config)
 
 Pages (POM) are described under the _pages_ sub folder and are referenced in the _env.rb_ file
