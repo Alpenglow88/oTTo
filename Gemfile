@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Ruby version ~> 2.5.0
+
 gem 'addressable', '~> 2.4'
 gem 'capybara', '~> 2.15'
 gem 'cucumber', '~> 3.1.1'
