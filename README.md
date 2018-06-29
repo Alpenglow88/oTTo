@@ -5,8 +5,9 @@ Tests are written in Gherkins stored in _.feature_ files stored in the support s
 Tests are run with
 
 ```ruby
-cucumber
+cucumber  --format pretty --expand --format json -o "testreport.json"
 ```
+The file name can be different but this is referenced in the .gitignore so that reports do not get pushed to the repo
 
 The _env.rb_ file controls the environment (like a config)
 

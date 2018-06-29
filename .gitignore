@@ -3,4 +3,5 @@ Gemfile.lock
 coverage
 .bundle
 .idea
-
+testreport.json
+cucumber_web_report.html
