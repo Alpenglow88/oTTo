@@ -14,10 +14,10 @@ ModuleLength:
   Enabled: false
 
 LineLength:
-  Max: 120
+  Max: 150
 
 MethodLength:
-  Max: 11
+  Max: 20
 
 Style/RegexpLiteral:
   Enabled: false

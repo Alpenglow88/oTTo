@@ -9,6 +9,8 @@ require 'capybara/cucumber'
 require 'capybara'
 require 'selenium-webdriver'
 require 'site_prism'
+require 'capybara-screenshot/cucumber'
+require 'base64'
 
 $LOAD_PATH << './lib'
 $LOAD_PATH << './pages'
@@ -20,7 +22,7 @@ Capybara.configure do |config|
   Capybara.run_server = false
   config.default_driver = :headless_chrome
   config.default_max_wait_time = 5
-  config.app_host = 'https://google.com'
+  config.app_host = 'https://playback-web-player.testing.indaznlab.com/'
   config.ignore_hidden_elements = false
 end
 
@@ -45,6 +47,34 @@ Capybara.register_driver :headless_chrome do |app|
     chromeOptions: { args: %w[headless disable-gpu] }
   )
   Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: capabilities)
+end
+
+Capybara::Screenshot.autosave_on_failure = false
+Capybara::Screenshot.prune_strategy = :keep_last_run
+After do |scenario|
+  if scenario.failed?
+    add_screenshot
+    add_browser_logs
+  end
+end
+def add_screenshot
+  file_path = 'screenshot.png'
+  page.driver.browser.save_screenshot(file_path)
+  image = open(file_path, 'rb', &:read)
+  encoded_image = Base64.encode64(image)
+  embed(encoded_image, 'image/png;base64', 'SCREENSHOT')
+end
+
+def add_browser_logs
+  time_now = Time.now
+  # Getting current URL
+  current_url = Capybara.current_url.to_s
+  # Gather browser logs
+  logs = page.driver.browser.manage.logs.get(:browser).map { |line| [line.level, line.message] }
+  # Remove warnings and info messages
+  logs.reject! { |line| %w[WARNING INFO].include?(line.first) }
+  logs.any? == true
+  embed(time_now.strftime('%Y-%m-%d-%H-%M-%S' + "\n") + ('Current URL: ' + current_url + "\n") + logs.join("\n"), 'text/plain', 'BROWSER ERROR')
 end
 
 #########################################################

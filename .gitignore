@@ -5,3 +5,4 @@ coverage
 .idea
 testreport.json
 cucumber_web_report.html
+screenshot.png

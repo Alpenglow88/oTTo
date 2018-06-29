@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 gem 'addressable', '~> 2.4'
 gem 'capybara', '~> 2.15'
+gem 'capybara-screenshot', '~> 1.0.21'
 gem 'cucumber', '~> 3.1.1'
 gem 'dotenv', '~> 2.2'
 gem 'report_builder', '~> 1.6'
