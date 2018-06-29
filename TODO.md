@@ -4,6 +4,8 @@ Full readme:
 * Usage
 * Architecture 
 
+Tags
+
 Session handling
 
 Does this need Dotenv if not on Rails
