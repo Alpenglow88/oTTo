@@ -17,7 +17,11 @@ LineLength:
   Max: 150
 
 MethodLength:
-  Max: 20
+  Max: 50
 
 Style/RegexpLiteral:
   Enabled: false
+
+Metrics/AbcSize:
+  Enabled: true
+  Max: 25
