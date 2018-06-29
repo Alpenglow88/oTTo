@@ -3,7 +3,7 @@ When('I navigate to the home page') do
 end
 
 Then('I am on the home page') do
-  expect(@home).to have_content
+  expect(@home).to have_no_content
 end
 
 Then('the main_logo is visible') do
