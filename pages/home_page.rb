@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TestHome < SitePrism::Page
   element :main_logo, :xpath, "//*[@id='hplogo']"
   element :search_entry_field, :xpath, "//*[@id='lst-ib']"

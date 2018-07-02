@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 unless ENV['CI']
   require 'simplecov'
   require 'dotenv'
@@ -20,7 +22,7 @@ require './pages/home_page'
 # change default driver between registered drivers listed below
 Capybara.configure do |config|
   Capybara.run_server = false
-  config.default_driver = 
+  config.default_driver = '<PLACEHOLDER>'
   config.default_max_wait_time = 5
   config.app_host = 'https://playback-web-player.testing.indaznlab.com/'
   config.ignore_hidden_elements = false
@@ -60,7 +62,7 @@ end
 def add_screenshot
   file_path = 'screenshot.png'
   page.driver.browser.save_screenshot(file_path)
-  image = open(file_path, 'rb', &:read)
+  image = file.open(file_path, 'rb', &:read)
   encoded_image = Base64.encode64(image)
   embed(encoded_image, 'image/png;base64', 'SCREENSHOT')
 end

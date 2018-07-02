@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'report_builder'
 time = Time.now.getutc
 ReportBuilder.configure do |config|

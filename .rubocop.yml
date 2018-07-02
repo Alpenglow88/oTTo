@@ -1,5 +1,5 @@
 AllCops:
-  TargetRubyVersion: 2.2
+  TargetRubyVersion: 2.5
 
 Documentation:
   Enabled: false
@@ -25,3 +25,7 @@ Style/RegexpLiteral:
 Metrics/AbcSize:
   Enabled: true
   Max: 25
+
+Metrics/BlockLength:
+  Enabled: true
+  Max: 50
