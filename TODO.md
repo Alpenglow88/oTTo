@@ -12,6 +12,7 @@ Does this need Dotenv if not on Rails
 
 Screenshot iteration - only single screenshot is being stored. This has to be investigated and if found to be placing the same screenshot in all reports then and update must be done
 
+Rake for task management 
 
 ##KNOWN BUGS AND STYLE ERRORS
 Offenses:
