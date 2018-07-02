@@ -20,7 +20,7 @@ require './pages/home_page'
 # change default driver between registered drivers listed below
 Capybara.configure do |config|
   Capybara.run_server = false
-  config.default_driver = :headless_chrome
+  config.default_driver = 
   config.default_max_wait_time = 5
   config.app_host = 'https://playback-web-player.testing.indaznlab.com/'
   config.ignore_hidden_elements = false
