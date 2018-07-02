@@ -15,6 +15,7 @@ rake --tasks
 ```
 Within this list the descriptions of each task shall define what each task does
 
+The user will need to set the browser version that they wish to test against. This can be achieved by running the setup rake commands before running _test_
 
 Manual running of commands can be done as below:
 
