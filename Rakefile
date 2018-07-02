@@ -22,17 +22,18 @@ namespace :setup do
   desc 'Setup for Chrome Testing'
   task :chrome do
     data = File.read('./features/support/env.rb')
-    browser_config = data.gsub('config.default_driver = <PLACEHOLDER>', 'config.default_driver = selenium_chrome')
+    browser_config = data.gsub("config.default_driver = '<PLACEHOLDER>'", 'config.default_driver = :selenium_chrome')
     File.open('./features/support/env.rb', 'w') do |f|
       f.write(browser_config)
     end
-    puts 'Environment set to Chrome'
+      puts 'Environment Change to Chrome'
   end
+
 
   desc 'Setup for Firefox Testing'
   task :firefox do
     data = File.read('./features/support/env.rb')
-    browser_config = data.gsub('config.default_driver = ', 'config.default_driver = selenium_firefox')
+    browser_config = data.gsub("config.default_driver = '<PLACEHOLDER>'", 'config.default_driver = :selenium_firefox')
     File.open('./features/support/env.rb', 'w') do |f|
       f.write(browser_config)
     end
@@ -42,7 +43,7 @@ namespace :setup do
   desc 'Setup for Headless Chrome Testing'
   task :headless do
     data = File.read('./features/support/env.rb')
-    browser_config = data.gsub('config.default_driver = ', 'config.default_driver = headless_chrome')
+    browser_config = data.gsub("config.default_driver = '<PLACEHOLDER>'", 'config.default_driver = :headless_chrome')
     File.open('./features/support/env.rb', 'w') do |f|
       f.write(browser_config)
     end
@@ -52,7 +53,7 @@ namespace :setup do
   desc 'Setup for Safari Testing'
   task :safari do
     data = File.read('./features/support/env.rb')
-    browser_config = data.gsub('config.default_driver = ', 'config.default_driver = selenium_safari')
+    browser_config = data.gsub("config.default_driver = '<PLACEHOLDER>'", 'config.default_driver = :selenium_safari')
     File.open('./features/support/env.rb', 'w') do |f|
       f.write(browser_config)
     end
