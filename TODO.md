@@ -8,9 +8,7 @@ Tags
 
 Session handling
 
-Does this need Dotenv if not on Rails
-
-Screenshot iteration - only single screenshot is being stored. This has to be investigated and if found to be placing the same screenshot in all reports then and update must be done
+Dotenv for credential storing
 
 Improve Rake tasks to include setup, cucumber run and then tear down of setup env.rb
 

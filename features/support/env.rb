@@ -51,7 +51,7 @@ Capybara.register_driver :headless_chrome do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: capabilities)
 end
 
-Capybara::Screenshot.autosave_on_failure = false
+Capybara::Screenshot.autosave_on_failure = true
 Capybara::Screenshot.prune_strategy = :keep_last_run
 After do |scenario|
   if scenario.failed?

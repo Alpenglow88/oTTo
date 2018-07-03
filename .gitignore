@@ -1,8 +1,8 @@
 .DS_Store
 Gemfile.lock
 coverage
-.bundle
-.idea
+*.bundle
+*.idea
+*.html
 testreport.json
-cucumber_web_report.html
 screenshot.png
