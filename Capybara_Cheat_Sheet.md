@@ -10,7 +10,7 @@ click_button 'awesome'
 # Both above
 click_link_or_button 'Save'
 
-# Text (area) field
+# Text (area) field - does not accept CSS Selector, only id, name or label text
 fill_in 'Name', with: 'Content'
 
 # Checkbox
