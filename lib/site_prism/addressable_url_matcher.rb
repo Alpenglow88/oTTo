@@ -38,6 +38,7 @@ module SitePrism
     def matches?(url, expected_mappings = {})
       actual_mappings = mappings(url)
       return false unless actual_mappings
+
       expected_mappings.empty? ||
         all_expected_mappings_match?(expected_mappings, actual_mappings)
     end
@@ -84,13 +85,16 @@ module SitePrism
     def component_matches(component, uri)
       component_template = component_templates[component]
       return {} unless component_template
+
       component_url = uri.public_send(component).to_s
       mappings = component_template.extract(component_url)
       return mappings if mappings
+
       # to support Addressable's expansion of queries
       # ensure it's parsing the fragment as appropriate (e.g. {?params*})
       prefix = COMPONENT_PREFIXES[component]
       return nil unless prefix
+
       component_template.extract(prefix + component_url)
     end
 
@@ -109,10 +113,11 @@ module SitePrism
     end
 
     def substitutions
-      @substitutions ||= slugs.each_with_index.reduce({}) do |memo, slug_index|
-        slug, index = slug_index
-        memo.merge(slug => slug_prefix(slug) + substitution_value(index))
-      end
+      @substitutions ||=
+        slugs.each_with_index.reduce({}) do |memo, slug_index|
+          slug, index = slug_index
+          memo.merge(slug => slug_prefix(slug) + substitution_value(index))
+        end
     end
 
     def reverse_substitutions

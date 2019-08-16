@@ -1,0 +1,15 @@
+# Configuration for probot-stale - https://github.com/probot/stale
+
+pulls:
+  daysUntilStale: 30
+  daysUntilClose: 5
+  markComment: >
+    This pull request has been automatically marked as stale because it has not had
+    recent activity. It will be closed in 5 days if no further activity occurs.
+
+issues:
+  daysUntilStale: 15
+  daysUntilClose: 15
+  markComment: >
+    This issue request has been automatically marked as stale because it has not had
+    recent activity. It will be closed in 15 days if no further activity occurs.

@@ -166,9 +166,10 @@ module SitePrism
         method_name = "wait_for_#{element_name}"
         create_helper_method(method_name, *find_args) do
           define_method(method_name) do |timeout = Capybara.default_max_wait_time, *runtime_args|
-            result = Capybara.using_wait_time(timeout) do
-              element_exists?(*merge_args(find_args, runtime_args))
-            end
+            result =
+              Capybara.using_wait_time(timeout) do
+                element_exists?(*merge_args(find_args, runtime_args))
+              end
             raise_wait_for_if_failed(self, element_name.to_s, timeout, !result)
             result
           end
@@ -179,9 +180,10 @@ module SitePrism
         method_name = "wait_for_no_#{element_name}"
         create_helper_method(method_name, *find_args) do
           define_method(method_name) do |timeout = Capybara.default_max_wait_time, *runtime_args|
-            result = Capybara.using_wait_time(timeout) do
-              element_does_not_exist?(*merge_args(find_args, runtime_args))
-            end
+            result =
+              Capybara.using_wait_time(timeout) do
+                element_does_not_exist?(*merge_args(find_args, runtime_args))
+              end
             raise_wait_for_no_if_failed(self, element_name.to_s, timeout, !result)
             result
           end

@@ -1,0 +1,37 @@
+# Mac - El Capitan - browser stack config
+
+common_caps:
+  "project": "Player Browserstack"
+  "build": "Windows 10"
+  "browserstack.debug": true
+  "browserstack.geolocation": "DE"
+  "browserstack.networkLogs": "false"
+
+browser_caps:
+  -
+    "os": "Windows"
+    "os_version": "10"
+    "browser": "Chrome"
+    "name": "Chrome"
+    "browserstack.console": "errors"
+  -
+    "os": "Windows"
+    "os_version": "10"
+    "browser": "Firefox"
+    "name": "Firefox"
+    "browserstack.console": "errors"
+  -
+    "os": "Windows"
+    "os_version": "10"
+    "browser": "Edge"
+    "name": "Edge"
+  -
+    "os": "Windows"
+    "os_version": "10"
+    "browser": "IE"
+    "name": "IE 11"
+  -
+    "os": "Windows"
+    "os_version": "10"
+    "browser": "Opera" 
+    "name": "Opera"

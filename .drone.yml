@@ -1,0 +1,29 @@
+clone:
+  CLONE REPO:
+    image: plugins/git:next
+
+pipeline:
+  BUILD AND UNIT TESTS:
+    image: ruby:2.6.0
+    commands:
+      - bundle install
+      - rake unit
+
+  LINT:
+    image: ruby:2.6.0
+    commands:
+      - gem install rubocop
+      - rubocop
+
+  PUBLISH IMAGE:
+    image: plugins/docker:17.12
+    dockerfile: scripts/docker/Dockerfile
+    repo: globx/playback_bdd
+    auto_tag: true
+    auto_tag_suffix: "${DRONE_BUILD_NUMBER}-${DRONE_COMMIT_SHA:0:10}"
+    secrets: [ docker_username, docker_password ]
+    when:
+      branch: [ master ]
+      event: [ push ]
+
+

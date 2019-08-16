@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'site_prism/loadable'
+require 'site_prism/site_prism_sub'
 
 module SitePrism
   # rubocop:disable Metrics/ClassLength
@@ -15,6 +16,10 @@ module SitePrism
         displayed?,
         "Expected #{current_url} to match #{url_matcher} but it did not."
       ]
+    end
+
+    def self.inherited(subclass)
+      SitePrismSubclass << subclass
     end
 
     def page
@@ -37,6 +42,7 @@ module SitePrism
       else
         expanded_url = url(expansion_or_html)
         raise SitePrism::NoUrlForPage if expanded_url.nil?
+
         visit expanded_url
         when_loaded(&block) if block_given?
       end
@@ -47,6 +53,7 @@ module SitePrism
       seconds = !args.empty? ? args.first : Capybara.default_max_wait_time
 
       raise SitePrism::NoUrlMatcherForPage if url_matcher.nil?
+
       begin
         Waiter.wait_until_true(seconds) { url_matches?(expected_mappings) }
       rescue SitePrism::TimeoutException
@@ -90,6 +97,7 @@ module SitePrism
 
     def url(expansion = {})
       return nil if self.class.url.nil?
+
       Addressable::Template.new(self.class.url).expand(expansion).to_s
     end
 

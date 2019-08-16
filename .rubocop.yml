@@ -1,31 +1,78 @@
+# https://rubocop.readthedocs.io/en/latest/
+
+# require: rubocop-performance
+
 AllCops:
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 2.6
+  Exclude:
+    - './DONOTINCLUDE.example.rb'
+    - './DONOTINCLUDE.rb'
+    - './test.rb'
+    - './lib/site_prism/*'
+    - './lib/site_prism.rb'
+    - './features/step_definitions/test.rb'
+  
 
-Documentation:
-  Enabled: false
-
-AccessorMethodName:
-  Enabled: false
-
-TrivialAccessors:
-  Enabled: false
-
-ModuleLength:
-  Enabled: false
-
-LineLength:
-  Max: 150
-
-MethodLength:
-  Max: 50
-
-Style/RegexpLiteral:
-  Enabled: false
+Layout/MultilineAssignmentLayout:
+  Enabled: true
 
 Metrics/AbcSize:
   Enabled: true
-  Max: 25
+  Max: 60
 
 Metrics/BlockLength:
   Enabled: true
-  Max: 50
+  Max: 120
+  CountComments: false
+
+Metrics/ClassLength:
+  Enabled: true
+  Max: 110
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+  Max: 6
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 30
+  CountComments: false
+
+Metrics/ModuleLength:
+  Enabled: true
+  Max: 120
+  CountComments: false
+
+Metrics/PerceivedComplexity:
+  Enabled: true
+  Max: 10
+
+Naming/MemoizedInstanceVariableName:
+  EnforcedStyleForLeadingUnderscores: optional
+
+Style/AutoResourceCleanup:
+  Enabled: true
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/DocumentationMethod:
+  Enabled: true
+    
+Style/GuardClause:
+  Enabled: false
+
+Style/InlineComment:
+  Enabled: true
+
+Style/IpAddresses:
+  Enabled: true
+  
+Style/MixinUsage:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
+  

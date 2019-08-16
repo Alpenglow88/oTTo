@@ -1,90 +1,91 @@
 # frozen_string_literal: true
 
-unless ENV['CI']
-  require 'simplecov'
-  require 'dotenv'
-  SimpleCov.start
-  Dotenv.load('.env')
-end
-
-require 'capybara/cucumber'
-require 'capybara'
-require 'selenium-webdriver'
-require 'site_prism'
-require 'capybara-screenshot/cucumber'
-require 'base64'
-
+$LOAD_PATH << './'
 $LOAD_PATH << './lib'
 $LOAD_PATH << './pages'
 
-require './pages/home_page'
+require 'active_support'
+require 'active_support/core_ext'
 
-# change default driver between registered drivers listed below
-Capybara.configure do |config|
-  Capybara.run_server = false
-  config.default_driver = '<PLACEHOLDER>'
-  config.default_max_wait_time = 5
-  config.app_host = 'https://playback-web-player.testing.indaznlab.com/'
-  config.ignore_hidden_elements = false
+require 'base64'
+require 'capybara'
+require 'capybara/cucumber'
+require 'capybara-extensions'
+require 'capybara-screenshot/cucumber'
+require 'cld'
+require 'json'
+require 'mail'
+require 'net/http'
+require 'require_all'
+require 'rest-client'
+require 'rspec'
+require 'selenium-webdriver'
+require 'site_prism'
+require 'uri'
+require 'webdrivers'
+
+require './lib/constants.rb'
+require './lib/helpers'
+require './lib/site_prism'
+
+require './features/support/browserstack'
+require './features/support/browser_drivers'
+require './features/support/multiple_assertions'
+require './pages/player_test_page'
+require './pages/sandbox_divs_page'
+require './pages/test_divs_page'
+
+include Helpers
+include Utils
+include EmailUtils
+include SitePrism
+
+unless ENV['CI']
+  require 'simplecov'
+  SimpleCov.start do
+    add_filter 'lib/site_prism/exceptions.rb'
+    add_filter 'lib/site_prism/element_container.rb'
+    add_filter 'lib/site_prism/element_checker.rb'
+    add_filter 'lib/site_prism/loadable.rb'
+    add_filter 'lib/site_prism/page.rb'
+  end
 end
 
 SitePrism.configure do |config|
   config.use_implicit_waits = false
 end
 
-Capybara.register_driver :selenium_safari do |app|
-  Capybara::Selenium::Driver.new(app, browser: :safari)
+Webdrivers.cache_time = 86_400
+
+# change default driver between registered drivers listed below
+Capybara.configure do |config|
+  Capybara.run_server = false
+  config.default_driver = DRIVER
+  config.javascript_driver = config.default_driver
+  config.default_max_wait_time = 10
+  config.ignore_hidden_elements = false
 end
 
-Capybara.register_driver :selenium_firefox do |app|
-  Capybara::Selenium::Driver.new(app, browser: :firefox)
-end
-
-Capybara.register_driver :selenium_chrome do |app|
-  Capybara::Selenium::Driver.new(app, browser: :chrome)
-end
-
-Capybara.register_driver :headless_chrome do |app|
-  capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-    chromeOptions: { args: %w[headless disable-gpu] }
-  )
-  Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: capabilities)
-end
-
+# Save screenshot on failure
 Capybara::Screenshot.autosave_on_failure = true
 Capybara::Screenshot.prune_strategy = :keep_last_run
 After do |scenario|
-  if scenario.failed?
-    add_screenshot
-    add_browser_logs
-  end
-end
-def add_screenshot
-  file_path = 'screenshot.png'
-  page.driver.browser.save_screenshot(file_path)
-  image = File.open(file_path, 'rb', &:read)
-  encoded_image = Base64.encode64(image)
-  embed(encoded_image, 'image/png;base64', 'SCREENSHOT')
+  time = Time.now.getutc
+  puts time
+  add_screenshot if scenario.failed?
+  # add_browser_logs if LOGS
 end
 
-def add_browser_logs
-  time_now = Time.now
-  # Getting current URL
-  current_url = Capybara.current_url.to_s
-  # Gather browser logs
-  logs = page.driver.browser.manage.logs.get(:browser).map { |line| [line.level, line.message] }
-  embed(time_now.strftime('%Y-%m-%d-%H-%M-%S' + "\n") + ('Current URL: ' + current_url + "\n") + logs.join("\n"), 'text/plain', 'BROWSER ERROR')
-end
+# Commented out USE FOR DEBUG ONLY
+# AfterStep do |scenario, step|
+#   time = Time.now.getutc
+#   errors = page.driver.browser.manage.logs.get(:browser)
 
-#########################################################
-## Code added for extra driver if not suported by Selenium
-
-# Capybara.register_driver :selenium do |app|
-#  Capybara::Selenium::Driver.new(app, browser: browser)
-# end
-
-# private
-
-# def browser
-#  @browser ||= ENV.fetch('browser', 'chrome' ).to_sym
+#   if errors.present?
+#     message = errors.map(&:message).join("\n\n")
+#     puts message
+#     File.open("console_logs_#{Date.today}_#{ENVIRONMENT}_#{DRIVER}.js", 'a') do |f|
+#       f.write("#{time} \n #{scenario} \n #{step} \n #{message}\n")
+#     end
+#   end
 # end

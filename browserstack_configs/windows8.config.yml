@@ -1,0 +1,27 @@
+# Windows - 8 - browser stack config
+
+common_caps:
+  "project": "Player Browserstack"
+  "build": "Windows 8"
+  "browserstack.debug": true
+  "browserstack.geolocation": "DE"
+  "browserstack.networkLogs": "false"
+
+browser_caps:
+  -
+    "os": "Windows"
+    "os_version": "8"
+    "browser": "Chrome"
+    "name": "Chrome"
+    "browserstack.console": "errors"
+  -
+    "os": "Windows"
+    "os_version": "8"
+    "browser": "Firefox"
+    "name": "Firefox"
+    "browserstack.console": "errors"
+  -
+    "os": "Windows"
+    "os_version": "8"
+    "browser": "Opera" 
+    "name": "Opera"
