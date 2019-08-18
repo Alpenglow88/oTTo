@@ -31,13 +31,10 @@ require './lib/site_prism'
 require './features/support/browserstack'
 require './features/support/browser_drivers'
 require './features/support/multiple_assertions'
-require './pages/player_test_page'
-require './pages/sandbox_divs_page'
 require './pages/test_divs_page'
 
 include Helpers
 include Utils
-include EmailUtils
 include SitePrism
 
 unless ENV['CI']

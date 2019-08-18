@@ -47,32 +47,35 @@ Capybara.register_driver :headless_chrome do |app|
   )
 end
 
-Capybara.register_driver :selenium_ie do |app|
-  # ::Selenium::WebDriver.logger.level = "debug"
-  options = ::Selenium::WebDriver::IE::Options.new
-  options.require_window_focus = true
-  Capybara::Selenium::Driver.new(
-    app,
-    browser: :ie,
-    desired_capabilities: ::Selenium::WebDriver::Remote::Capabilities.ie,
-    options: options
-  )
-end
+# --------------------------------------------------------------------------------
+# UNDER CONSTRUCTION - DO NOT USE
 
-Capybara.register_driver :selenium_edge do |app|
-  # ::Selenium::WebDriver.logger.level = "debug"
-  Capybara::Selenium::Driver.new(
-    app,
-    browser: :edge
-  )
-end
+# Capybara.register_driver :selenium_ie do |app|
+#   # ::Selenium::WebDriver.logger.level = "debug"
+#   options = ::Selenium::WebDriver::IE::Options.new
+#   options.require_window_focus = true
+#   Capybara::Selenium::Driver.new(
+#     app,
+#     browser: :ie,
+#     desired_capabilities: ::Selenium::WebDriver::Remote::Capabilities.ie,
+#     options: options
+#   )
+# end
 
-Capybara.register_driver :selenium_chrome_tv do |app|
-  browser_options = ::Selenium::WebDriver::Chrome::Options.new
-  browser_options.args << '--user-agent=faketvuseragent'
-  Capybara::Selenium::Driver.new(
-    app,
-    browser: :chrome,
-    options: browser_options
-  )
-end
+# Capybara.register_driver :selenium_edge do |app|
+#   # ::Selenium::WebDriver.logger.level = "debug"
+#   Capybara::Selenium::Driver.new(
+#     app,
+#     browser: :edge
+#   )
+# end
+
+# Capybara.register_driver :selenium_chrome_tv do |app|
+#   browser_options = ::Selenium::WebDriver::Chrome::Options.new
+#   browser_options.args << '--user-agent=faketvuseragent'
+#   Capybara::Selenium::Driver.new(
+#     app,
+#     browser: :chrome,
+#     options: browser_options
+#   )
+# end

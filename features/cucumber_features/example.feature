@@ -9,19 +9,21 @@ Background:
     Given I show the number 4 in the console
     And I open Google
 
-Scenario: Measure a value
+Scenario: Get a search results value back from Google
     When I enter 'hello world' into the search bar
-    And I press the search button
-    Then I get a list of search results
+    And I search in Google
+    Then I get a list of the number search results found
 
 @single_test_tag
 Scenario Outline: An example of test scenario with multiple parameters
-    When I do an action '<x>'
-    And I do another action '<y>'
-    Then I get an outcome '<outcome>'
+    When I enter '<x>' into the search bar
+    And I search in Google
+    Then I get a list of the number search results found
+    Then I see the value '<x>' in the search bar
+    And The page title is '<page_title>'
 
     Examples:
-    |x|y|outcome|
-    |x_example_1|y_example_1|outcome_1|
-    |x_example_2|y_example_2|outcome_2|
-    |x_example_3|y_example_3|outcome_3|
+    |x|page_title|
+    |toasted|toasted - Google Search|
+    |cheese|cheese - Google Search|
+    |sandwich|sandwich - Google Search|
