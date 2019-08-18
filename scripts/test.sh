@@ -2,7 +2,7 @@ export HOST="" # URL of testing
 export USERNAME="" # Username for login if required
 export PASSWORD="" # Password for login if required
 export OPTIONS="" # Options to test. Needs to be in format '-t\\@<TAG>' 
-export DRIVER="selenium_chrome" # Driver to be used, list can be found '...features/support/browser_drivers.rb'
+export DRIVER="" # Driver to be used, list can be found '...features/support/browser_drivers.rb'
 export ENVIRONMENT="" # 'Staging'/'Testing' if required
 export OUTPUT_FILE="" # File path of json test report, usually 'testreport'
 export OUTPUT_FILE_TITLE="" # File name of report generated
@@ -24,8 +24,8 @@ PLUGIN_LOGS=$LOGS
 PLAYER_SANDBOX_PATH="..."
 
 rake test
-# rake rerun
-# rake report
+rake rerun
+rake report
 
 # docker run \
 #     --volume $PLAYER_SANDBOX_PATH:$PLUGIN_LOCAL_PATH \
