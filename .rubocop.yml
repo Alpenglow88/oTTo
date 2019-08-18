@@ -11,6 +11,7 @@ AllCops:
     - './lib/site_prism/*'
     - './lib/site_prism.rb'
     - './features/step_definitions/test.rb'
+    - './lib/email_reports.rb'
   
 
 Layout/MultilineAssignmentLayout:

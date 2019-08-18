@@ -4,4 +4,4 @@
 
 # Inject into page using page.execute_script(script)
 
-CODE_CONSTANT = "<code>"
+CODE_CONSTANT = '<code>'

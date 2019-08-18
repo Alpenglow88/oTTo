@@ -26,7 +26,6 @@ module Utils
     embed(time_now.strftime('%Y-%m-%d-%H-%M-%S' + "\n") + ('Current URL: ' + current_url + "\n") + logs.join("\n"), 'text/plain', 'BROWSER ERROR')
   end
 
-
   # Takes argument 'OS' and creates an API link for Browserstack builds
   def create_browserstack_build_list_link(osver)
     "https://api.browserstack.com/automate/builds/\'#{osver}\'/sessions.json"
@@ -64,5 +63,4 @@ module Utils
   def timecode_split_helper
     split(':').map(&:to_i).inject(0) { |a, b| a * 60 + b }
   end
-
 end
