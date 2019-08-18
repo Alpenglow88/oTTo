@@ -2,7 +2,7 @@
 
 The file `features/cucumber_features/example.feature` shows examples of how a feature file can be constructed. This is not the only way, however this is a nice simple way of construction 2 different scenario types that are used frequently.
 
-Each step is mapped to a corresponding step definition found in the corresponding directory. Explanations of the code are listed in teh examples
+Each step is mapped to a corresponding step definition found in the corresponding directory. Explanations of the code are listed in the examples. This is not an extensive list and should be used as examples of construction of step definitions for further expansion to suit your needs - see [OTTO Cheatsheet](docs/otto_cheatsheet.md) for hints and tips
 
 As long as the parent directory is call `cucumber_features` then Cucumber will recursively scan the folder for any/all .feature files so you can store then in easy to organise folders within the parent directory. 
 
