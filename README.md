@@ -102,7 +102,7 @@ Constants are stored withing the _./lib/constants.rb_ file.
 
 Code coverage is covered using _'simplecov'_ - work is needed to fully understand utilise this and **SHOULD BE IGNORED FOR NOW**
 
-_'rubocop'_ is used to check Ruby convention practices and *MUST BE RUN BEFORE ANY COMMIT*. The definitions of what it looks at are found in the _rubocop.yml_ file and these are run against every commit to GitHub using Drone (configured in the _drone.yml_)
+_'rubocop'_ is used to check Ruby convention practices and *MUST BE RUN BEFORE ANY COMMIT*. The definitions of what it looks at are found in the _rubocop.yml_
 
 ### Noted StackOverflow Questions that might be of help
 
