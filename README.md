@@ -110,37 +110,14 @@ https://stackoverflow.com/questions/51447270/site-prism-not-finding-pom-elements
 
 https://stackoverflow.com/questions/51177100/capybara-unable-to-find-field-text-entry-that-is-is-not-disabled
 
-### Browserstack -- WIP DO NOT USE - needs updating to new format
+## Credit where credit is due
 
-OTTO can be used with Browserstack as long as there are valid login details.
+This collection of tools and frameworks could not have been put together without the help of many people who have helped me in the way I hope to help others in the future.
 
-Functionality can be tested using [Browserstack](https://www.browserstack.com/). Different tasks have been setup to cover the most common use cases within the _Rakefile_ and are listed below with the coverage of each. Before running tests the default_driver must be set to _browserstack_. The commands to run these follow the format below:
+OTTO is designed to help people and if you wish to contribute please let me know and then you can see your name on this list! :blush:
 
-```ruby
-bundle exec rake browserstack_<PLATFORM>:<OSVERSION>
-```
+Some of the main people:
 
-So for example to run tests in Browserstack for a Mac using OSX High Sierra you would use:
-
-```ruby
-bundle exec rake browserstack_mac:machighsierra
-```
-The full list of tasks is as follows:
-
-```ruby
-browserstack_mac:macmojave
-browserstack_mac:machighsierra
-browserstack_mac:macsierra
-browserstack_mac:macelcapitan
-browserstack_windows:windows10
-browserstack_windows:windows8_1
-browserstack_windows:windows8
-browserstack_windows:windows7
-```
-The Browserstack setup is contained within _./features/support/browserstack.rb_ and this is being used as a substitute for the config.default_driver found in the _env.rb_. This pulls the Browserstack login details from the _DONOTINCLUDE.rb_ file so this must be populated by the user.
-
-Each specific OS and platform combination relies on a config file to define which browsers and platforms are defined for each OS. These are stored in the *browserstack_configs* folder. This also contains a file called _single.config.yml_ which is the default config used by all others. This can be used to run a single use Browserstack run but should not be edited further than the browser capabilities. 
-
-In order to set the geo-location of each Browserstack run there is a *common_caps* option listed in each config file. This can be updated with any 2 character code found in the [Browserstack documentation](https://www.browserstack.com/ip-geolocation). These ca also be applied to each individual OS/Platform setup for separate location testing.
-
-TODO : shell scripts will be created to automate each testing run but we are currently waiting for Browserstack to confirm their geo-location policy and the option of static IPs. THIS FEATURE WILL NOT WORK UNTIL THIS HAS BEEN CLEARED UP
+* Jullian Tellez
+* Kieren Brown
+* Adam Vincent

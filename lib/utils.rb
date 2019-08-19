@@ -26,16 +26,6 @@ module Utils
     embed(time_now.strftime('%Y-%m-%d-%H-%M-%S' + "\n") + ('Current URL: ' + current_url + "\n") + logs.join("\n"), 'text/plain', 'BROWSER ERROR')
   end
 
-  # Takes argument 'OS' and creates an API link for Browserstack builds
-  def create_browserstack_build_list_link(osver)
-    "https://api.browserstack.com/automate/builds/\'#{osver}\'/sessions.json"
-  end
-
-  # Takes arguments 'OS' and 'Session_ID and creates an API link for Browserstack automated session logs
-  def browserstack_session_logs_link(osver, session_id)
-    "https://api.browserstack.com/automate/builds/\'#{osver}\'/sessions/\'#{session_id}\'/logs"
-  end
-
   # Take number and work out it as a percentage of the argument total
   def percent_of(total)
     format '%.2f%%', self / total.to_f * 100

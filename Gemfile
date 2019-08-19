@@ -7,9 +7,6 @@ ruby '2.6.0'
 # A toolkit of support libraries and Ruby core extensions extracted from the Rails framework. Rich support for multibyte strings, internationalization, time zones, and testing.
 gem 'activesupport'
 
-# Ruby bindings for BrowserStack Local [https://www.browserstack.com/]
-gem 'browserstack-local'
-
 # Acceptance test framework for web applications [http://teamcapybara.github.io/capybara/]
 gem 'capybara'
 

@@ -28,7 +28,6 @@ require './lib/constants.rb'
 require './lib/helpers'
 require './lib/site_prism'
 
-require './features/support/browserstack'
 require './features/support/browser_drivers'
 require './features/support/multiple_assertions'
 require './pages/test_divs_page'
