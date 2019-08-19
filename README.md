@@ -118,6 +118,6 @@ OTTO is designed to help people and if you wish to contribute please let me know
 
 Some of the main people:
 
-* Jullian Tellez
-* Kieren Brown
+* [Jullian Tellez](https://github.com/juliantellez)
+* [Kieren Brown](https://github.com/kj-brown)
 * Adam Vincent
