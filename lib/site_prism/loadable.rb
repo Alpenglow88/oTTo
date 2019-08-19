@@ -25,6 +25,11 @@ module SitePrism
       #
       # @param block [&block] A block which returns true if the page
       # loaded successfully, or false if it did not.
+      # This block can contain up to 2 elements in an array
+      # The first is the physical validation test to be truthily evaluated.
+      #
+      # If this does not pass, then the 2nd item (if defined), is output
+      # as an error message to the +FailedLoadValidationError+ that is thrown
       def load_validation(&block)
         _load_validations << block
       end
@@ -49,23 +54,21 @@ module SitePrism
     # Executes the given block after the page is loaded.
     #
     # The loadable object instance is yielded into the block.
-    #
-    # @param block [&block] The block to be executed once the page
-    # has finished loading.
-    def when_loaded(&_block)
+    def when_loaded
       # Get original loaded value, in case we are nested
       # inside another when_loaded block.
       previously_loaded = loaded
-      message = 'A block was expected, but none received.'
-      raise ArgumentError, message unless block_given?
 
-      # Within the block, cache loaded? to optimize performance.
+      # Within the block, check (and cache) loaded?, to see whether the
+      # page has indeed loaded according to the rules defined by the user.
       self.loaded = loaded?
 
-      message = "Failed to load because: #{load_error || 'no reason given'}"
-      raise ::SitePrism::NotLoadedError, message unless loaded
+      # If the page hasn't loaded. Then crash and return the error message.
+      # If one isn't defined, just return the Error code.
+      raise SitePrism::FailedLoadValidationError, load_error unless loaded
 
-      yield self
+      # Return the yield value of the block if one was supplied.
+      yield self if block_given?
     ensure
       self.loaded = previously_loaded
     end

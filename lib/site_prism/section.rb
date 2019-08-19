@@ -7,7 +7,8 @@ module SitePrism
     include Capybara::DSL
     include ElementChecker
     include Loadable
-    include ElementContainer
+    include DSL
+    extend Forwardable
 
     attr_reader :root_element, :parent
 
@@ -35,25 +36,29 @@ module SitePrism
     # occurs and calls within a section (For example section.find(element))
     # correctly scope to look within the section only
     def page
-      root_element || super
+      return root_element if root_element
+
+      SitePrism.logger.warn('Root Element not found; Falling back to `super`')
+      super
     end
 
     def visible?
       page.visible?
     end
 
-    def execute_script(input)
-      Capybara.current_session.execute_script(input)
-    end
+    def_delegators :capybara_session,
+                   :execute_script,
+                   :evaluate_script,
+                   :within_frame
 
-    def evaluate_script(input)
-      Capybara.current_session.evaluate_script(input)
+    def capybara_session
+      Capybara.current_session
     end
 
     def parent_page
-      candidate_page = parent
-      candidate_page = candidate_page.parent until candidate_page.is_a?(SitePrism::Page)
-      candidate_page
+      candidate = parent
+      candidate = candidate.parent until candidate.is_a?(SitePrism::Page)
+      candidate
     end
 
     def native
@@ -62,16 +67,20 @@ module SitePrism
 
     private
 
-    def find_first(*find_args)
-      root_element.find(*find_args)
+    def _find(*find_args)
+      page.find(*find_args)
+    end
+
+    def _all(*find_args)
+      page.all(*find_args)
     end
 
     def element_exists?(*find_args)
-      root_element.has_selector?(*find_args)
+      page.has_selector?(*find_args)
     end
 
     def element_does_not_exist?(*find_args)
-      root_element.has_no_selector?(*find_args)
+      page.has_no_selector?(*find_args)
     end
   end
 end
