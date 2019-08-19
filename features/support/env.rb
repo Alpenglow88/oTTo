@@ -48,10 +48,6 @@ unless ENV['CI']
   end
 end
 
-SitePrism.configure do |config|
-  config.use_implicit_waits = false
-end
-
 Webdrivers.cache_time = 86_400
 
 # change default driver between registered drivers listed below

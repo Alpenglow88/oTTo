@@ -8,7 +8,7 @@ I want to see my example feature file for use with BDD scenarios in Gherkin lang
 Background: 
     Given I show the number 4 in the console
     And I open Google
-
+@test
 Scenario: Get a search results value back from Google
     When I enter 'hello world' into the search bar
     And I search in Google
