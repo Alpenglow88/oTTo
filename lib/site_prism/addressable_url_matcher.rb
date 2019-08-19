@@ -104,10 +104,11 @@ module SitePrism
     end
 
     def substitutions
-      @substitutions ||= slugs.each_with_index.reduce({}) do |memo, slug_index|
-        slug, index = slug_index
-        memo.merge(slug => slug_prefix(slug) + substitution_value(index))
-      end
+      @substitutions ||=
+        slugs.each_with_index.reduce({}) do |memo, slug_index|
+          slug, index = slug_index
+          memo.merge(slug => slug_prefix(slug) + substitution_value(index))
+        end
     end
 
     def reverse_substitutions
