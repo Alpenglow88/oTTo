@@ -1,7 +1,7 @@
 export HOST="" # URL of testing
 export USERNAME="" # Username for login if required
 export PASSWORD="" # Password for login if required
-export OPTIONS="-t\\@test" # Options to test. Needs to be in format '-t\\@<TAG>' 
+export OPTIONS="" # Options to test. Needs to be in format '-t\\@<TAG>' 
 export DRIVER="selenium_chrome" # Driver to be used, list can be found '...features/support/browser_drivers.rb'
 export ENVIRONMENT="" # 'Staging'/'Testing' if required
 export OUTPUT_FILE="" # File path of json test report, usually 'testreport'

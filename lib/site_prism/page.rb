@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'site_prism/loadable'
+require 'lib/site_prism/site_prism_sub.rb'
 
 module SitePrism
   # rubocop:disable Metrics/ClassLength
@@ -32,6 +33,10 @@ module SitePrism
       else
         Capybara.current_session
       end
+    end
+
+    def self.inherited(subclass)
+      SitePrismSubclass << subclass
     end
 
     # Loads the page.
