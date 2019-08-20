@@ -23,4 +23,4 @@ The following are files that might need editing as your usage of OTTO increases:
 
 ## Useful tips:
 
-When your feature files have grown in number as your test suite matures, during development try using the `@test` single tag to only run one (or a couple) of scenarios at a time. This reduces the waiting time for each run to finish if you only care about developing one scenario.
+* When your feature files have grown in number as your test suite matures, during development try using the `@test` single tag to only run one (or a couple) of scenarios at a time. This reduces the waiting time for each run to finish if you only care about developing one scenario.
