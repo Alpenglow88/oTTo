@@ -1,4 +1,4 @@
-# OTTO - the best kind of automation is OTTOmotation
+# **OTTO** - the best kind of automation is OTTOmotation
 
 - [OTTO-what-now?!](#otto-what-now?!)
 - [Installation](#installation)
@@ -111,11 +111,9 @@ Runs the unit tests (see the [`unit_tests` README](unit_tests/README.md))
 
 
 
-
-
 ## **Credit where credit is due**
 
-This collection of tools and frameworks could not have been put together without the help of many people along the way. 
+OTTO could not have been put together without the help of many people along the way. 
 
 This isn't complete or perfect but hey, nothing ever is! If you want to contribute to OTTO that would be great! There will be contributor guidelines etc etc up here soon but please do contribute in any way that makes this a better tool or teaching/learning aid :blush: Just branch out and raise a PR for any changes or additions!
 

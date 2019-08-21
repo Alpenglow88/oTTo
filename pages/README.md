@@ -1,4 +1,4 @@
-# Pages README
+# **Pages**
 
 The files in this directory are the `pages` that are used in the `page object model` approach.
 

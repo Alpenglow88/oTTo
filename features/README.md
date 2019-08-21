@@ -1,4 +1,4 @@
-# Features README
+# **Features**
 
 **This uses Cucumber's [Gherkin syntax](https://cucumber.io/docs/gherkin/reference/) and it is advised that you check out information around this from them directly.**
 
@@ -21,6 +21,6 @@ The following are files that might need editing as your usage of OTTO increases:
 * __hooks.rb__ a handy place for storing any Cucumber `Before` or `After` hooks. This might have limited usage for you these can also be described in the `env.rb`
 * __env.rb__ this is the engine block of OTTO defining load paths, required gems, supporting files within the project, user defined modules as well as startup information for OTTO's underlying tech (Capybara, SimpleCov etc). __NOTE__ *make sure you update this with any new modules otherwise you will not have them included in your code for use!!*
 
-## Useful tips:
+## **Useful tips**
 
 * When your feature files have grown in number as your test suite matures, during development try using the `@test` single tag to only run one (or a couple) of scenarios at a time. This reduces the waiting time for each run to finish if you only care about developing one scenario.

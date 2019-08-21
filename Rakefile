@@ -19,7 +19,7 @@ end
 
 desc 'Rerun Cucumber feature failures'
 Cucumber::Rake::Task.new(:rerun) do |t|
-  t.cucumber_opts = ["@rerun.txt --format pretty --expand --format json -o 'rerunreport.json'"]
+  t.cucumber_opts = ["@rerun.txt --format pretty --expand --format json -o '#{RERUN_OUTPUT_FILE}.json'"]
 end
 
 desc 'Generation of HTML report from testreport.json'

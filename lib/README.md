@@ -1,4 +1,4 @@
-# lib README
+# **lib**
 
 Within the `lib` folder you will find much of the supporting library of files and definitions used throughout OTTO, as well as many helper and utility functions. These have a few general functions stored here but these are intended to be added to as your project code increases. This allows you to keep clean working code while referencing out to the functions and code snippets help within the library.
 
