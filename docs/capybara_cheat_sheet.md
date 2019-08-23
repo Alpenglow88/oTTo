@@ -1,3 +1,6 @@
+# Capybara Cheatsheet 
+## Not mine but contains a bunch of good stuff
+
 ## Capybara Actions
 
 ```ruby

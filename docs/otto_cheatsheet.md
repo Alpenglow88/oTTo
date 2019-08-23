@@ -1,15 +1,17 @@
+# **OTTO Cheatsheet**
+
 This is intended to be a cheat-sheet and hint guide for functionality and storage of code snippets for reuse across projects. 
 
 **All of these are freely available through a bit of research. I strongly recommend you research any snippet before using it so that you know what it does!**
 
 This is ever growing as useful things are found - feel free to add to this if you have something interesting/useful/fun to add to this list of functions and usage :grimacing:
 
-### Code snippets
+# **Code snippets**
 
-## Ruby
+## **Ruby**
 These are useful functions and snippets of code in Ruby
 
-# Snippets
+## **Snippets**
 
 Puts a newline in the console output - surprisingly useful for debugging
 ```ruby
@@ -49,7 +51,7 @@ Delete tmp files created if they exist
 ```
 
 
-Ruby matchers
+## Ruby matchers
 ```ruby
 # equal
 expect(<value_a>).to eq(<value_b>)
@@ -73,7 +75,7 @@ expect(<value_a>).to be_within(<tolerance>).of(<expected_value>)
 ```
 
 
-# loop through input value until condition is met with built in cyclical timeout
+Loop through input value until condition is met with built in cyclical timeout
 ```ruby
     n = 0
     until <condition>
@@ -82,7 +84,8 @@ expect(<value_a>).to be_within(<tolerance>).of(<expected_value>)
       break if n == 2000
     end
 ```
-# returns the corresponding value found in a hash table
+
+Returns the corresponding value found in a hash table
 
 ```ruby
   def hash_function(input)
@@ -97,7 +100,7 @@ expect(<value_a>).to be_within(<tolerance>).of(<expected_value>)
 
 ```
 
-# use NetHTTP to get JSON Auth bearer token (check location of token with API documentation)
+Use NetHTTP to get JSON Auth bearer token (check location of token with API documentation)
 
 ```ruby
     uri = URI.parse(<sign_in_api>)
@@ -119,7 +122,7 @@ expect(<value_a>).to be_within(<tolerance>).of(<expected_value>)
 
 ## RestClient
 
-# Parse array sourced from API endpoint
+## Parse array sourced from API endpoint
 
 Basic usage to get a value 
 
@@ -155,9 +158,9 @@ Usage to cycle through API response values and get a value based on specified cr
 
 
 
-## Tool
+# Tool
 
-# Description
+## Description
 
 ```ruby
 <code>
