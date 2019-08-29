@@ -35,7 +35,7 @@ CLD.detect_language("plus ça change, plus c'est la même chose")
 
 Supported languages:
 ```
-Afrikaans Albanian Arabic Armenian Azerbaijani Basque Belarusian Bengali Bihari Bulgarian Catalan Cebuano Cherokee Croatian Czech Chinese Chinese_T Danish Dhivehi Dutch English Estonian Finnish French Galician Ganda Georgian German Greek Gujarati Haitian_Creole Hebrew Hindi Hmong Hungarian Icelandic Indonesian Inuktitut Irish Italian Javanese Japanese Kannada Khmer Kinyarwanda Korean Laothian Latvian Limbu Lithuanian Macedonian Malay Malayalam Maltese Marathi Nepali Norwegian Oriya Persian Polish Portuguese Punjabi Romanian Russian Scots_Gaelic Serbian Sinhalese Slovak Slovenian Spanish Swahili Swedish Syriac Tagalog Tamil Telugu Thai Turkish Ukrainian Urdu Vietnamese Welsh Yiddish
+Afrikaans Albanian Arabic Armenian Azerbaijani Basque Belarusian Bengali Bulgarian Catalan Cebuano Cherokee Croatian Czech Chinese Chinese_T Danish Dutch English Estonian Finnish French Galician Ganda Georgian German Greek Gujarati Haitian_Creole Hebrew Hindi Hmong Hungarian Icelandic Indonesian Inuktitut Irish Italian Javanese Japanese Kannada Khmer Kinyarwanda Korean Laothian Latvian Lithuanian Macedonian Malay Malayalam Maltese Marathi Nepali Norwegian Oriya Persian Polish Portuguese Punjabi Romanian Russian Scots_Gaelic Serbian Sinhalese Slovak Slovenian Somali Spanish Swahili Swedish Tagalog Tamil Telugu Thai Turkish Ukrainian Urdu Vietnamese Welsh Yiddish Zulu
 ```
 
 # **[Cucumber](https://cucumber.io/)**
@@ -158,7 +158,43 @@ Code coverage for Ruby 1.9+ with a powerful configuration library and automatic 
 This creates an additional folder that is not committed to GitHub that describes the code coverage you have within your project.
 
 # **[Site Prism](https://github.com/natritmeyer/site_prism)**
-A Page Object Model DSL for Capybara. See [Capybara](#Capybara) section for more information and cheatsheet, or link from Gem name
+A Page Object Model DSL for Capybara. See [Capybara](#Capybara) section for more information or link from Gem name
+
+A basic cheat sheet has been pulled from their GitHub below
+
+```ruby
+
+When /^I navigate to the google home page$/ do
+  @home = Home.new
+  @home.load
+end
+
+Then /^the home page should contain the menu and the search form$/ do
+  @home.wait_for_menu # menu loads after a second or 2, give it time to arrive
+  expect(@home).to have_menu
+  expect(@home).to have_search_field
+  expect(@home).to have_search_button
+end
+
+When /^I search for Sausages$/ do
+  @home.search_field.set "Sausages"
+  @home.search_button.click
+end
+
+Then /^the search results page is displayed$/ do
+  @results_page = SearchResults.new
+  expect(@results_page).to be_displayed
+end
+
+Then /^the search results page contains 10 individual search results$/ do
+  @results_page.wait_for_search_results
+  expect(@results_page).to have_search_results count: 10
+end
+
+Then /^the search results contain a link to the wikipedia sausages page$/ do
+  expect(@results_page.search_result_links).to include "http://en.wikipedia.org/wiki/Sausage"
+end
+```
 
 # **[Webdrivers](https://github.com/titusfortner/webdrivers)** 
 Keep your Selenium WebDrivers updated automatically.

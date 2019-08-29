@@ -1,6 +1,6 @@
 # **OTTO Cheatsheet**
 
-This is intended to be a cheat-sheet and hint guide for functionality and storage of code snippets for reuse across projects. 
+This is intended to be a cheat sheet and hint guide for functionality and storage of code snippets for reuse across projects. 
 
 **All of these are freely available through a bit of research. I strongly recommend you research any snippet before using it so that you know what it does!**
 
@@ -50,33 +50,24 @@ Delete tmp files created if they exist
   File.delete('<tmp.rb>') if File.exist?('<tmp.rb>')
 ```
 
-
-## Ruby matchers
 ```ruby
-# equal
-expect(<value_a>).to eq(<value_b>)
-expect(<value_a>) == <value_b>
+# Send a particular key event
+page.<element>.send_keys :space
 
-# not equal
-expect(<value_a>) != <value_b>
+# Click an element to a particular pixel point in XY coordinates 
+page.<element>.click(x: 1, y: 1)
 
-# greater than
-expect(<value_a>) >= <value_b>
-
-# less than
-expect(<value_a>) <= <value_b>
-
-# 00:00:00 timecode matching
-expect(<timecode>).to match(/([0-9]|0[0-9]|1[0-9]|2[0-9]):[0-5][0-9]$/)
-
-# Value to be within range
-expect(<value_a>).to be_within(<tolerance>).of(<expected_value>)
-
-```
+# Get CSS value for a specified style from the page under test
+page.<element>.style('<css_style>')
 
 
-Loop through input value until condition is met with built in cyclical timeout
 ```ruby
+# Presents integer or float as a percent of a second integer or float
+ {int}.percent_of({int})
+ ```
+
+```ruby
+# Loop through input value until condition is met with built in cyclical timeout
     n = 0
     until <condition>
       n += 1
@@ -154,14 +145,25 @@ Usage to cycle through API response values and get a value based on specified cr
     end
 ```
 
-
-
-
-
-# Tool
-
-## Description
-
+## Ruby matchers
 ```ruby
-<code>
+# equal
+expect(<value_a>).to eq(<value_b>)
+expect(<value_a>) == <value_b>
+
+# not equal
+expect(<value_a>) != <value_b>
+
+# greater than
+expect(<value_a>) >= <value_b>
+
+# less than
+expect(<value_a>) <= <value_b>
+
+# 00:00:00 timecode matching
+expect(<timecode>).to match(/([0-9]|0[0-9]|1[0-9]|2[0-9]):[0-5][0-9]$/)
+
+# Value to be within range
+expect(<value_a>).to be_within(<tolerance>).of(<expected_value>)
+
 ```
