@@ -12,7 +12,7 @@ OTTO was born out of a need for a quick and simple web automation framework for 
 
 There were lots of things that were found along the way, lots of help and hints and tips given and the hope is that by putting this here, others might be able to use it to quickly get something setup for their own purposes and/or get a nice introduction to automation tools and some of the usage. There are READMEs along the way that should explain the basics and a general usage guide that should mean you can get up and running pretty quickly.
 
-OTTO does assume a basic knowledge of Ruby, however this is not difficult to pick up for newcomers and the community is very helpful. Remember, **no question is a stupid question!** There are also some [cheatsheets](docs) included with OTTO which might come in handy.
+OTTO does assume a basic knowledge of Ruby, however this is not difficult to pick up for newcomers and the community is very helpful. Remember, **no question is a stupid question!** There are also some [cheatsheets](docs/cheatsheets) included with OTTO which might come in handy.
 
 ## **Some of the tech used in OTTO**
 

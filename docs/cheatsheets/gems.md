@@ -17,7 +17,7 @@ This Gem gives you a huge amount of extensions and functions that you can use wh
 
 Capybara helps you test web applications by simulating how a real user would interact with your app. It is agnostic about the driver running your tests and comes with Rack::Test and Selenium support built in.
 
-There is a cheatsheet [provided](docs/capybara_cheat_sheet.md) however this is by no means extensive. This should get you going with some tests though, so for more advanced users and those wishing to delve deeper, click on the link in above to see the official documentation
+There is a cheatsheet [provided](docs/cheatsheets/capybara.md) however this is by no means extensive. This should get you going with some tests though, so for more advanced users and those wishing to delve deeper, click on the link in above to see the official documentation
 This is the same for both the extensions and screenshot which complements Capybara with additional finders and matchers and takes screenshots automatically on failures respectively. 
 
 *NOTE - the cheatsheet covers some of the extension as well as the official commands*
