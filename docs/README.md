@@ -2,7 +2,7 @@
 
 In this folder you will find a bunch of cheat sheets that have been collated from various sources across the internet. Some of them are more mature than others but they should all come in handy to some degree of another during your time with OTTO (and beyond!)
 
-Currently there are cheet sheets for:
+Currently there are cheat sheets for:
 
 * [Capybara](docs/cheatsheets/capybara.md)
     * [Extensions](docs/cheatsheets/capybara_extensions.md)

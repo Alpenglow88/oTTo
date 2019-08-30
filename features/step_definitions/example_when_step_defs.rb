@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# This step definition takes a supplied integer from the feature file and show it in the console - designed to show use of integers in features-  INFO PURPOSES ONLY
+# This step definition takes a supplied integer from the feature file and shows it in the console - designed to show use of integers in features-  INFO PURPOSES ONLY
 When('I show the number {int} in the console') do |int|
   puts int
 end
