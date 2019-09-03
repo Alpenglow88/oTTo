@@ -87,7 +87,7 @@ Try putting some custom tasks into the `Rakefile` and running them (as per the [
 
 this Gem helps to build the lovely HTML report that OTTO generates. It takes a number of parameters as inputs but for OTTO, the best example is the [report_builder.rb](lib/report_builder.rb)  script. This shows everything that OTTO uses however, if you want to know more, click on the Gem name
 
-# **[Require All](https://github.com/jarmo/require_all)
+# **[Require All](https://github.com/jarmo/require_all)**
 This is a great little Gem that helps you require multiple files at once (as long as they are in the same directory).
 
 usage:
