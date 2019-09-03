@@ -1,5 +1,9 @@
 # **OTTO** - the best kind of automation is OTTOmotation
 
+<p align="center">
+  <img src="./assets/crude_otto.png" alt="crude OTTO" width="500"/>
+</p>
+
 - [OTTO-what-now?!](#otto-what-now?!)
 - [Installation](#installation)
     - [Mac OSX](#mac-osx)

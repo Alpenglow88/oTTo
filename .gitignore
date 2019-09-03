@@ -4,7 +4,6 @@ coverage
 *.bundle
 *.idea
 *.html
-*.png
 *.zip
 cucumber_web_report.html
 screenshot.png
