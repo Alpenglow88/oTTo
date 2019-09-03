@@ -37,7 +37,7 @@ OTTO is currently only optomised for use on MAC OSX so might not function as int
 To automatically install all components for OTTO
 
 ```bash
-/setup_script 2>&1 | tee ~/setup_script.log
+./setup_script 2>&1 | tee ~/setup_script.log
 ```
 
 ### **Mac OSX**

@@ -127,7 +127,7 @@ brew cleanup
 ###############################################################################
 if [ -e $cwd/Gemfile.lock ]; then
 	chapter "Updating Gemfile.lock"
-	bundler update
+	bundle update
 	print_success "Gems updated"
 else
 	chapter "Installing Gems"
