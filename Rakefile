@@ -6,7 +6,10 @@ require 'rake'
 require 'rspec/core/rake_task'
 require 'rubygems'
 
+
 report_builder = './lib/report_builder.rb'
+OUTPUT_FILE="OUTPUT_FILE"
+RERUN_OUTPUT_FILE="retest_report"
 
 task default: :test
 

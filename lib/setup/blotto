@@ -428,6 +428,8 @@ ask_for_sudo() {
 
     # Ask for the administrator password upfront.
 
+    print_in_cyan "Enter administrator password"
+
     sudo -v &> /dev/null
 
     # Update existing `sudo` time stamp
@@ -494,7 +496,9 @@ cli_is_installed() {
 }
 
 copy_key_github() {
-    inform 'Public key copied! Paste into Github…'
+    inform 'Public key copied! Paste into Github…\n'
+    inform 'Select new SSH key and paste the key into the field, along with a suitable title\n'
+    inform 'Return to setup when complete and saved\n'
     [[ -f $pub ]] && cat $pub | pbcopy
     open 'https://github.com/account/ssh'
     read -p "   ✦  Press enter to continue…"
@@ -503,6 +507,7 @@ copy_key_github() {
 }
 
 github_key_check() {
+    print_in_cyan 'If you have already entered your key to Github previously then do not re-enter it now.\n'
 	if ask "SSH key found. Enter it in Github?" Y; then
 		copy_key_github;
 	else

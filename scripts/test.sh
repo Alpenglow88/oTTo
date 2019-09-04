@@ -1,12 +1,13 @@
-export HOST="" # URL of testing
-export USERNAME="" # Username for login if required
-export PASSWORD="" # Password for login if required
-export OPTIONS="" # Options to test. Needs to be in format '-t\\@<TAG>' 
-export DRIVER="" # Driver to be used, list can be found '...features/support/browser_drivers.rb'
-export OUTPUT_FILE="" # File path of json test report, usually 'testreport'
-export OUTPUT_FILE_TITLE="" # File name of report generated
-export RERUN_OUTPUT_FILE="" # File path of json test report, usually 'reruntestreport'
-export RERUN_OUTPUT_FILE_TITLE="" # File name of report generated
+export HOST="https://playback-web-player.dazndev.com/master/sandbox/index.html"
+export USERNAME="playde3@dazn.com"
+export PASSWORD="12345qwerty"
+export OPTIONS="-t\\@test"
+export DRIVER="selenium_chrome"
+export ENVIRONMENT="Staging"
+export OUTPUT_FILE="OUTPUT_FILE"
+export OUTPUT_FILE_TITLE="test"
+export RERUN_OUTPUT_FILE="retest_report"
+export RERUN_OUTPUT_FILE_TITLE="retest"
 
 PLUGIN_LOCAL_PATH="/temp"
 PLUGIN_USERNAME=$USERNAME
@@ -19,8 +20,8 @@ PLUGIN_OUTPUT_FILE_TITLE=$OUTPUT_FILE_TITLE
 PLAYER_SANDBOX_PATH="..."
 
 rake test
-rake rerun
-rake report
+# rake rerun
+# rake report
 
 # docker run \
 #     --volume $<path>:$PLUGIN_LOCAL_PATH \

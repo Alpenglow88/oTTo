@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '2.6.0'
+ruby '~> 2.6.0'
 
 # A toolkit of support libraries and Ruby core extensions extracted from the Rails framework. Rich support for multibyte strings, internationalization, time zones, and testing.
 gem 'activesupport'
@@ -50,7 +50,7 @@ gem 'rubocop'
 gem 'rubocop-performance'
 
 # WebDriver is a tool for writing automated tests of websites. It aims to mimic the behaviour of a real user, and as such interacts with the HTML of the application [https://github.com/SeleniumHQ/selenium]
-gem 'selenium-webdriver'
+gem 'selenium-webdriver', '3.142.3'
 
 # Code coverage for Ruby 1.9+ with a powerful configuration library and automatic merging of coverage across test suites [https://github.com/colszowka/simplecov]
 gem 'simplecov'
