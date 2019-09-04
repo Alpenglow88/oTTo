@@ -160,3 +160,9 @@ else
 fi
 
 got_blotto
+
+
+###############################################################################
+# Much of this code is taken from Mina Markham's 'Formation' script
+# https://github.com/minamarkham/formation. Credit is due to her!
+###############################################################################
