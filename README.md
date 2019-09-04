@@ -36,6 +36,8 @@ OTTO is currently only optomised for use on MAC OSX so might not function as int
 
 ### **Automatic Installation**
 
+**Whilst the automatic install is very useful...NEVER INSTALL A RANDOM SCRIPT FROM ANYWHERE! READ THE `setup_script` FILE BEFORE DOING ANYTHING**
+
 To automatically install all components for OTTO
 
 ```bash
