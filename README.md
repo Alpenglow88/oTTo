@@ -32,6 +32,8 @@ Some of the main tech used under the hood
 ## **Installation**
 OTTO is currently only optomised for use on MAC OSX so might not function as intended on Windows machines (and the install will be different) but this is something that is high on the list of issues to address
 
+## **Mac OSX**
+
 ### **Automatic Installation**
 
 To automatically install all components for OTTO
@@ -40,7 +42,7 @@ To automatically install all components for OTTO
 ./setup_script 2>&1 | tee ~/setup_script.log
 ```
 
-### **Mac OSX**
+### **Manual Installation**
 You will need to get the specified version of Ruby (currently v2.6.0) as well as installing [RVM](https://rvm.io/rvm/about) for version ruby management.
 
 You will also need to install all the additional [RubyGems](https://guides.rubygems.org/) listed in the `Gemfile` using the `bundler` gem built in to Ruby. This will generate a `Gemfile.lock` and this will set all the Gem versions for your project. **Do not delete** this unless you plan to update.

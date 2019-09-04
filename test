@@ -1,0 +1,56 @@
+
+ask() {
+    # https://djm.me/ask
+    local prompt default reply
+
+    while true; do
+
+        if [ "${2:-}" = "Y" ]; then
+            prompt="Y/n"
+            default=Y
+        elif [ "${2:-}" = "N" ]; then
+            prompt="y/N"
+            default=N
+        else
+            prompt="y/n"
+            default=
+        fi
+
+        # Ask the question (not using "read -p" as it uses stderr not stdout)
+        echo -n "  [?] $1 [$prompt] "
+
+        # Read the answer (use /dev/tty in case stdin is redirected from somewhere else)
+        read reply </dev/tty
+
+        # Default?
+        if [ -z "$reply" ]; then
+            reply=$default
+        fi
+
+        # Check if the reply is valid
+        case "$reply" in
+            Y*|y*) return 0 ;;
+            N*|n*) return 1 ;;
+        esac
+
+    done
+}
+
+
+
+
+
+ruby_version="$(command -v ruby)"
+if [[ "$(command -v ruby)" == *"2.6.0"* ]]; then
+# print_warning "OTTO requires Ruby v2.6.0 to be installed."
+echo "OTTO requires Ruby v2.6.0 to be installed."
+if ask "Would you like to remove it and install v2.6.0?" Y; then
+#   brew uninstall ruby
+echo "you selected yes"
+else
+echo "You selected no"
+fi
+
+else
+#   print_success_muted "Correct Ruby version already installed. Skipping."
+fi

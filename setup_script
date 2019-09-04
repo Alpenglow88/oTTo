@@ -54,6 +54,24 @@ ask_for_sudo
 chapter "Installing Dependencies…"
 
 # -----------------------------------------------------------------------------
+# Ruby - Checking Ruby version
+# -----------------------------------------------------------------------------
+if [[ "$(command -v ruby)" != *"2.6.0"* ]]; then
+print_warning "OTTO detected $(command -v ruby) as your system installed Ruby version"
+print_warning "OTTO requires Ruby v2.6.0 to be installed at both system and RVM level."
+if ask "Would you like to remove all older versions and install v2.6.0 to your system?" Y; then
+print_in_yellow "Uninstalling old system version(s) of Ruby\n"
+  brew uninstall ruby
+else
+print_in_red "You have chosen to not remove older system versions of Ruby. This can cause issues between the system and RVM Ruby versions that might impact OTTO"
+print_in_red "\nIf you find issues in running OTTO please rerun setup_script and choose to remove the older system versions of Ruby\n"
+fi
+
+else
+  print_success_muted "Correct Ruby version already installed. Skipping."
+fi
+
+# -----------------------------------------------------------------------------
 # RVM
 # -----------------------------------------------------------------------------
 if [ -x rvm ]; then
