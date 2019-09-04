@@ -4,10 +4,10 @@ export PASSWORD="12345qwerty"
 export OPTIONS="-t\\@test"
 export DRIVER="selenium_chrome"
 export ENVIRONMENT="Staging"
-export OUTPUT_FILE="OUTPUT_FILE"
-export OUTPUT_FILE_TITLE="test"
+export OUTPUT_FILE="test_report"
+export OUTPUT_FILE_TITLE="Test Report"
 export RERUN_OUTPUT_FILE="retest_report"
-export RERUN_OUTPUT_FILE_TITLE="retest"
+export RERUN_OUTPUT_FILE_TITLE="Rerun Test Report"
 
 PLUGIN_LOCAL_PATH="/temp"
 PLUGIN_USERNAME=$USERNAME

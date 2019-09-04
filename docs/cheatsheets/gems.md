@@ -74,7 +74,7 @@ end
 desc 'Run Cucumber features and generate .json report using stated browser driver'
 Cucumber::Rake::Task.new(:test) do |t|
   options = ENV['OPTIONS'] ? ENV['OPTIONS'].to_str : '-t @critical_path_controls'
-  default = "--format pretty --expand --format json -o '#{OUTPUT_FILE}.json' -f rerun --out rerun.txt"
+  default = "--format pretty --expand --format json -o 'test_report.json' -f rerun --out rerun.txt"
   t.cucumber_opts = ["#{options} #{default}"]
 end
 ```
