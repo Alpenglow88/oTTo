@@ -2,7 +2,7 @@
 
 OTTO makes use of RSpec to organise and run unit tests. They are broken into the tests themselves and the specs needed to run them.
 
-In order to keep confidence in the functions listed in the tool, if you add anything new ensure you have added unit tests to cover it. For example, the default functions listed in the [utils](lib/utils.rb) all have corresponding unit test specs and tests (apart from *add_screenshot* and *add_browser_logs* which are tested as part of the normal process of operation and have been excluded)
+In order to keep confidence in the functions listed in the tool, if you add anything new ensure you have added unit tests to cover it. For example, the default functions listed in the [utils](../lib/utils.rb) all have corresponding unit test specs and tests (apart from *add_screenshot* and *add_browser_logs* which are tested as part of the normal process of operation and have been excluded)
 
 If you are contributing to OTTO any new functions must have unit tests and pull requests will be rejected unless they are present or have a good reason not to.
 
