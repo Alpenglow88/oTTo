@@ -34,12 +34,12 @@ This is a password for a system login if required. This enables the user to refe
 
 ### `OPTIONS`
 
-This field is where you define the Cucumber tags to be tested. These must be in the format `-t\\@<tag_name>` in order to work. Adding tags is discussed in more detail in the [features README](features/README.md) but tags are very helpful for organising your tests so it is advised that you ensure all tests are tagged.
+This field is where you define the Cucumber tags to be tested. These must be in the format `-t\\@<tag_name>` in order to work. Adding tags is discussed in more detail in the [features README](../features/README.md) but tags are very helpful for organising your tests so it is advised that you ensure all tests are tagged.
 
 
 ### `DRIVER`
 
-This field is the browser driver to be used for testing. The list can be found [here](features/support/browser_drivers.rb). This is used by the setup scripts so this is a **very important** field to fill in. If not, you will not be driving anything and your tests will fail before they start
+This field is the browser driver to be used for testing. The list can be found [here](../features/support/browser_drivers.rb). This is used by the setup scripts so this is a **very important** field to fill in. If not, you will not be driving anything and your tests will fail before they start
 
 ### `OUTPUT_FILE` *(optional)*
 
