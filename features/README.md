@@ -16,7 +16,7 @@ Scenario: Get a search results value back from Google
 ```
 The [example feature](cucumber_features/example.feature) shows 2 different scenario types that are used frequently.
 
-Each step is mapped to a corresponding step definition found in the [corresponding directory](step_definitions). Explanations of the code are listed in the examples. This is not an extensive list and should be used as examples for construction of step definitions for further expansion to suit your needs - see [OTTO Cheatsheet](./docs/cheatsheets/otto_hints_and_tips.md) for hints and tips
+Each step is mapped to a corresponding step definition found in the [corresponding directory](step_definitions). Explanations of the code are listed in the examples. This is not an extensive list and should be used as examples for construction of step definitions for further expansion to suit your needs - see [OTTO Cheatsheet](../docs/cheatsheets/otto_hints_and_tips.md) for hints and tips
 
 As long as the parent directory is called `cucumber_features` then Cucumber will recursively scan the folder for any/all feature files so you can store then in easy to organise folders within the parent directory. 
 
