@@ -35,7 +35,7 @@ A few things that expect from you, and you can expect from others:
 
 
 ## **How To Contribute**
-If you would like to contribute, start by searching through [issues](https://github.com/Alpenglow88/OTTO/issues) and [pull requests](https://github.com/Alpenglow88/OTTO/pulls) to see if someone ahs already raised your idea or question. It could be a perfect chance to get involved and help out.
+If you would like to contribute, start by searching through [issues](https://github.com/Alpenglow88/OTTO/issues) and [pull requests](https://github.com/Alpenglow88/OTTO/pulls) to see if someone has already raised your idea or question. It could be a perfect chance to get involved and help out.
 
 If it isn't there, great! 
 
