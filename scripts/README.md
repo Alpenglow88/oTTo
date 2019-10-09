@@ -34,7 +34,7 @@ This is a password for a system login if required. This enables the user to refe
 
 ### `OPTIONS`
 
-This field is where you define the Cucumber tags to be tested. These must be in the format `-t\\@<tag_name>` in order to work. Adding tags is discussed in more detail in the [features README](../features/README.md) but tags are very helpful for organising your tests so it is advised that you ensure all tests are tagged.
+This field is where you define the Cucumber tags to be tested. These must be in the format `-t\\@<tag_name>` in order to work. Adding tags is discussed in more detail in the [features README](../features/README.md) but tags are very helpful for organising your tests so it is advised that you ensure all tests are tagged. If this is left blank OTTO will run **ALL** the feature file scenarios.
 
 
 ### `DRIVER`
