@@ -5,7 +5,7 @@ coverage
 *.idea
 *.html
 *.zip
-# *.png
+*.png
 screenshot.png
 test_report.json
 rerunreport.json
