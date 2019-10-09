@@ -8,8 +8,8 @@ pulls:
     recent activity. It will be closed in 5 days if no further activity occurs.
 
 issues:
-  daysUntilStale: 15
-  daysUntilClose: 15
+  daysUntilStale: 30
+  daysUntilClose: 30
   markComment: >
     This issue request has been automatically marked as stale because it has not had
     recent activity. It will be closed in 15 days if no further activity occurs.
