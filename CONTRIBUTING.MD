@@ -32,6 +32,7 @@ A few things that expect from you, and you can expect from others:
 * Be kind and considerate. Everyone is different and this is a **tool for learning and to help others**. Other people will not have the same experience or knowledge as you and this is a chance to help and teach those who wish to learn and ask questions.
 * Everything here is done under our [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you agree to abide by its terms
 * Any PR will need to pass all [tests](unit_tests). This is a tool by QAs for QAs, it should pass testing :wink:. PR's will be rejected if they are not passing
+* All new features and functions **must have** unit tests where applicable.
 
 
 ## **How To Contribute**
