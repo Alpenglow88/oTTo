@@ -22,6 +22,9 @@ gem 'cld2', require: 'cld', git: 'https://github.com/Alpenglow88/cld2.git'
 # Behaviour Driven Development with elegance and joy [https://cucumber.io/]
 gem 'cucumber'
 
+# Easy creation of mock data
+gem 'ffaker
+'
 # Easy installation and use of geckodriver, that provides the HTTP API described by the WebDriver protocol to communicate with Gecko browsers, such as Firefox [https://github.com/DevicoSolutions/geckodriver-helper]
 gem 'geckodriver-helper'
 
