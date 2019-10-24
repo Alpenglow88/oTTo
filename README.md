@@ -8,7 +8,6 @@
 - [Installation](#installation)
     - [Mac OSX](#mac-osx)
 - [Basic Usage](#basic-usage)
-    - [Docker](#docker)
 
 
 ## **oTTo-what-now?!**
@@ -120,11 +119,6 @@ This generates an easy to read html report (see the [`lib` README](lib/README.md
 
 ### `rake unit`
 Runs the unit tests (see the [`unit_tests` README](unit_tests/README.md))
-
-## **Docker**
-
-**WIP PLEASE DO USE YET**
-
 
 
 ## **Credit where credit is due**
