@@ -644,10 +644,10 @@ label_green() {
 
 got_blotto() {
     printf "
-  ${bold}Congrats! OTTO is ready to get Blotto!!${normal} 🍋
+  ${bold}Congrats! oTTo is ready to get Blotto!!${normal} 🍋
 
   ╭────────────────────────────────────────────────────╮
-  │ Thanks for installing OTTO!                        │
+  │ Thanks for installing oTTo!                        │
   │ If you find it useful, please star it!             │
   │ Tell people and help contribute!                   │
   ╰────────────────────────────────────────────────────╯

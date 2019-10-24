@@ -2,7 +2,7 @@
 Cheerfully stolen as a template and edited to fit our needs from [opensource.guide](https://github.com/github/opensource.guide).
 ## **Our Pledge**
 
-OTTO is all about helping others and fostering an open and welcoming environment.
+oTTo is all about helping others and fostering an open and welcoming environment.
 As contributors and maintainers we pledge to make participation in our project and 
 community a fun, inclusive and harassment free activity regardless of age, body
 size, disability, ethnicity, gender identity and expression, level of experience,

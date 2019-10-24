@@ -1,24 +1,24 @@
-# **OTTO** - the best kind of automation is OTTOmotation
+# **oTTo** - the best kind of automation is oTTomotation
 
 <p align="center">
-  <img src="./assets/crude_otto.png" alt="crude OTTO" width="500"/>
+  <img src="./assets/crude_otto.png" alt="crude oTTo" width="500"/>
 </p>
 
-- [OTTO-what-now?!](#otto-what-now?!)
+- [oTTo-what-now?!](#otto-what-now?!)
 - [Installation](#installation)
     - [Mac OSX](#mac-osx)
 - [Basic Usage](#basic-usage)
     - [Docker](#docker)
 
 
-## **OTTO-what-now?!**
-OTTO was born out of a need for a quick and simple web automation framework for a small project. As the project grew, so did OTTO. It quickly took on a much more coherent form and started to look more complete than the loose gathering of tools hanging off a framework.
+## **oTTo-what-now?!**
+oTTo was born out of a need for a quick and simple web automation framework for a small project. As the project grew, so did oTTo. It quickly took on a much more coherent form and started to look more complete than the loose gathering of tools hanging off a framework.
 
 There were lots of things that were found along the way, lots of help and hints and tips given and the hope is that by putting this here, others might be able to use it to quickly get something setup for their own purposes and/or get a nice introduction to automation tools and some of the usage. There are READMEs along the way that should explain the basics and a general usage guide that should mean you can get up and running pretty quickly.
 
-OTTO does assume a basic knowledge of Ruby, however this is not difficult to pick up for newcomers and the community is very helpful. Remember, **no question is a stupid question!** There are also some [cheatsheets](docs/cheatsheets) included with OTTO which might come in handy.
+oTTo does assume a basic knowledge of Ruby, however this is not difficult to pick up for newcomers and the community is very helpful. Remember, **no question is a stupid question!** There are also some [cheatsheets](docs/cheatsheets) included with oTTo which might come in handy.
 
-## **Some of the tech used in OTTO**
+## **Some of the tech used in oTTo**
 
 Some of the main tech used under the hood
 
@@ -30,7 +30,7 @@ Some of the main tech used under the hood
 
 
 ## **Installation**
-OTTO is currently only optomised for use on MAC OSX so might not function as intended on Windows machines (and the install will be different) but this is something that is high on the list of issues to address
+oTTo is currently only optomised for use on MAC OSX so might not function as intended on Windows machines (and the install will be different) but this is something that is high on the list of issues to address
 
 ## **Mac OSX**
 
@@ -38,7 +38,7 @@ OTTO is currently only optomised for use on MAC OSX so might not function as int
 
 **Whilst the automatic install is very useful...NEVER INSTALL A RANDOM SCRIPT FROM ANYWHERE! READ THE `setup_script` FILE BEFORE DOING ANYTHING**
 
-To automatically install all components for OTTO
+To automatically install all components for oTTo
 
 ```bash
 ./setup_script 2>&1 | tee ~/setup_script.log
@@ -82,7 +82,7 @@ brew uninstall ruby
 
 ## **Basic Usage**
 
-The basic usage of OTTO is running a single script, `scripts/test.sh`. This is a bash script and is run from the home directory using
+The basic usage of oTTo is running a single script, `scripts/test.sh`. This is a bash script and is run from the home directory using
 ```
 sh scripts/test.sh
 ```
@@ -129,9 +129,9 @@ Runs the unit tests (see the [`unit_tests` README](unit_tests/README.md))
 
 ## **Credit where credit is due**
 
-OTTO could not have been put together without the help of many people along the way. 
+oTTo could not have been put together without the help of many people along the way. 
 
-This isn't complete or perfect but hey, nothing ever is! If you want to contribute to OTTO that would be great! Please do contribute in any way that makes this a better tool or teaching/learning aid :blush: All we ask is that you follow the normal kind of things, [Code of Conduct](CODE_OF_CONDUCT.md) and [Contributing](CONTRIBUTING.MD) and then you can win a place on the coveted List of Contributors! (*"ooo, it's so shiny!"*)
+This isn't complete or perfect but hey, nothing ever is! If you want to contribute to oTTo that would be great! Please do contribute in any way that makes this a better tool or teaching/learning aid :blush: All we ask is that you follow the normal kind of things, [Code of Conduct](CODE_OF_CONDUCT.md) and [Contributing](CONTRIBUTING.MD) and then you can win a place on the coveted List of Contributors! (*"ooo, it's so shiny!"*)
 
 Contributors:
 

@@ -1,9 +1,9 @@
-# **Contributing to OTTO**
+# **Contributing to oTTo**
 
-Thanks for checking out OTTO and coming this far to find out how to contribute! 
+Thanks for checking out oTTo and coming this far to find out how to contribute! 
 
 We are excited to hear and learn from you as you will, without doubt, know something that others don't, know how to help on a problem, or simply want to learn! 
-Your experiences and knowledge will benefit others who use and maintain OTTO.
+Your experiences and knowledge will benefit others who use and maintain oTTo.
 
 ## **Table of Contents**
 
@@ -13,7 +13,7 @@ Your experiences and knowledge will benefit others who use and maintain OTTO.
 - [Becoming a Maintainer](#becoming-a-maintainer)
 
 ## **What Can You Contribute?**
-There are lots of ways to contribute to OTTO
+There are lots of ways to contribute to oTTo
 
 * Bug reporting and fixing
 * Features
@@ -36,7 +36,7 @@ A few things that expect from you, and you can expect from others:
 
 
 ## **How To Contribute**
-If you would like to contribute, start by searching through [issues](https://github.com/Alpenglow88/OTTO/issues) and [pull requests](https://github.com/Alpenglow88/OTTO/pulls) to see if someone has already raised your idea or question. It could be a perfect chance to get involved and help out.
+If you would like to contribute, start by searching through [issues](https://github.com/Alpenglow88/oTTo/issues) and [pull requests](https://github.com/Alpenglow88/oTTo/pulls) to see if someone has already raised your idea or question. It could be a perfect chance to get involved and help out.
 
 If it isn't there, great! 
 

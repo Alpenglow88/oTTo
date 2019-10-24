@@ -1,4 +1,4 @@
-# **OTTO Cheatsheet**
+# **oTTo Cheatsheet**
 
 This is intended to be a cheat sheet and hint guide for functionality and storage of code snippets for reuse across projects. 
 

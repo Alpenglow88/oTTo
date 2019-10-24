@@ -1,6 +1,6 @@
 # **Gems**
 
-Here you can find a little bit of information about each Gem currently bundled into OTTO. Where applicable there is some basic usage and, if known or needed, some hints and tips as well. Other times it is better to direct out to the official documentation where things are updated more regularly, or occasionally a cheatsheet compiled for OTTO.
+Here you can find a little bit of information about each Gem currently bundled into oTTo. Where applicable there is some basic usage and, if known or needed, some hints and tips as well. Other times it is better to direct out to the official documentation where things are updated more regularly, or occasionally a cheatsheet compiled for oTTo.
 
 ## [Active Support](https://guides.rubyonrails.org/active_support_core_extensions.html)
 A toolkit of support libraries and Ruby core extensions extracted from the Rails framework. Rich support for multibyte strings, internationalization, time zones, and testing.
@@ -39,7 +39,7 @@ Afrikaans Albanian Arabic Armenian Azerbaijani Basque Belarusian Bengali Bulgari
 ```
 
 # **[Cucumber](https://cucumber.io/)**
-This is the Gem that provides the Cucumber Gherkin syntax to OTTO. This is documented in part [here](features) but this is the core BDD essence of OTTO so it is a really good idea to go check out their more up-to-date documentation at the link in the Gem name.
+This is the Gem that provides the Cucumber Gherkin syntax to oTTo. This is documented in part [here](features) but this is the core BDD essence of oTTo so it is a really good idea to go check out their more up-to-date documentation at the link in the Gem name.
 
 # **[Geckodriver-Helper](https://github.com/DevicoSolutions/geckodriver-helper)**
 
@@ -48,12 +48,12 @@ Easy installation and use of geckodriver, that provides the HTTP API described b
 This has been used to declare the Firefox driver in the [browser_driver.rb](features/support/browser_drivers.rb) and at present does not need any further attention, but if you want to know more, check out the link in the Gem name
 
 # **[Mail](https://github.com/mikel/mail)**
-This is a pretty powerful Gem that deals with emails. Currently OTTO does have the capacity to email reports after test runs and this usage can be seen [here](lib/email_reports.rb). However, this is not perfect and unless you know about how email works it is best to leave this alone, or dive into the Gem name link and the internet to learn more!
+This is a pretty powerful Gem that deals with emails. Currently oTTo does have the capacity to email reports after test runs and this usage can be seen [here](lib/email_reports.rb). However, this is not perfect and unless you know about how email works it is best to leave this alone, or dive into the Gem name link and the internet to learn more!
 
 # **[Rake](https://github.com/ruby/rake)**
 Rake is way of defining tasks in Ruby in order to allow the user to call them later without having to repeat code. This is what can be seen as a `Task-Manager`.
 
-There is a lot of good information in the official docs (Gem name link) but some basic usage useful for OTTO are listed below or you ca checkout the [Rakefile](Rakefile).
+There is a lot of good information in the official docs (Gem name link) but some basic usage useful for oTTo are listed below or you ca checkout the [Rakefile](Rakefile).
 
 ```ruby
 desc 'Run a prebuilt Ruby script'
@@ -63,7 +63,7 @@ end
 
 desc 'Print specified text to console'
 task :print_text do
-puts 'My name is OTTO! I love to get blotto!'
+puts 'My name is oTTo! I love to get blotto!'
 end
 
 desc 'RSpec run for initial unit tests'
@@ -85,7 +85,7 @@ Try putting some custom tasks into the `Rakefile` and running them (as per the [
 
 # **[Report Builder](https://github.com/rajatthareja/ReportBuilder)**
 
-this Gem helps to build the lovely HTML report that OTTO generates. It takes a number of parameters as inputs but for OTTO, the best example is the [report_builder.rb](lib/report_builder.rb)  script. This shows everything that OTTO uses however, if you want to know more, click on the Gem name
+this Gem helps to build the lovely HTML report that oTTo generates. It takes a number of parameters as inputs but for oTTo, the best example is the [report_builder.rb](lib/report_builder.rb)  script. This shows everything that oTTo uses however, if you want to know more, click on the Gem name
 
 # **[Require All](https://github.com/jarmo/require_all)**
 This is a great little Gem that helps you require multiple files at once (as long as they are in the same directory).
@@ -120,12 +120,12 @@ RestClient.get(url, headers={})
 RestClient.post(url, payload, headers={})
 ```
 
-This is used in conjunction with `Net::HTTP` (bundled with Ruby) throughout OTTO and the documentation is very good for both. That said, it is a really good idea to brush up on HTTP response codes and general HTTP verbs, construction and API testing in general before delving too deep into this one.
+This is used in conjunction with `Net::HTTP` (bundled with Ruby) throughout oTTo and the documentation is very good for both. That said, it is a really good idea to brush up on HTTP response codes and general HTTP verbs, construction and API testing in general before delving too deep into this one.
 
 
 # **[RSpec](https://rspec.info/)**
 
-This Gem is for writing [TDD](https://en.wikipedia.org/wiki/Test-driven_development) tests. It is a behaviour driven development tool and the usage of it within OTTO can be found listed in the [unit test README](unit_tests/README.md)
+This Gem is for writing [TDD](https://en.wikipedia.org/wiki/Test-driven_development) tests. It is a behaviour driven development tool and the usage of it within oTTo can be found listed in the [unit test README](unit_tests/README.md)
 
 For more details and usage, check out the link in the Gem name.
 
@@ -150,7 +150,7 @@ The [Rubocop-performance](https://github.com/rubocop-hq/rubocop-performance) Gem
 
 # **[Selenium Webdriver](https://github.com/SeleniumHQ/selenium)**
 
-WebDriver is a tool for writing automated tests of websites. It aims to mimic the behaviour of a real user, and as such interacts with the HTML of the application. Capybara is the [DSL](https://en.wikipedia.org/wiki/Domain-specific_language) that OTTO uses to communicate with the bindings from Selenium and as such OTTO usage is through Capybara and Site-Prism.
+WebDriver is a tool for writing automated tests of websites. It aims to mimic the behaviour of a real user, and as such interacts with the HTML of the application. Capybara is the [DSL](https://en.wikipedia.org/wiki/Domain-specific_language) that oTTo uses to communicate with the bindings from Selenium and as such oTTo usage is through Capybara and Site-Prism.
 
 # **[SimpleCov](https://github.com/colszowka/simplecov)**
 Code coverage for Ruby 1.9+ with a powerful configuration library and automatic merging of coverage across test suites 

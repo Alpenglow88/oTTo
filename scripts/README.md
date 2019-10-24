@@ -2,9 +2,9 @@
 
 ## **`test.sh`**
 
-The section below is the nerve centre of OTTO. Although you can run tests without entering data, this makes things much easier as it creates global constants that can be easily edited as needed without the need to declare them throughout your code.
+The section below is the nerve centre of oTTo. Although you can run tests without entering data, this makes things much easier as it creates global constants that can be easily edited as needed without the need to declare them throughout your code.
 
-The idea is that by handing this file to anyone they would be able to fill it in and use this to then run any tests you have within OTTO using differing credentials etc as needed. 
+The idea is that by handing this file to anyone they would be able to fill it in and use this to then run any tests you have within oTTo using differing credentials etc as needed. 
 
 ```bash
 export HOST="" 
@@ -30,11 +30,11 @@ This is a username for a system login if required. This enables the user to refe
 
 This is a password for a system login if required. This enables the user to reference `PASSWORD` when needing to, without the need to remember different login information.
 
-*NOTE it  is not good practice to include passwords for anything in your code. Whilst `DONOTINCLUDE` files and password managers are widely used, OTTO is designed for predominantly closed systems and as such you could include a password here if you choose to but it is advised to __never__ commit these to the repository* 
+*NOTE it  is not good practice to include passwords for anything in your code. Whilst `DONOTINCLUDE` files and password managers are widely used, oTTo is designed for predominantly closed systems and as such you could include a password here if you choose to but it is advised to __never__ commit these to the repository* 
 
 ### `OPTIONS`
 
-This field is where you define the Cucumber tags to be tested. These must be in the format `-t\\@<tag_name>` in order to work. Adding tags is discussed in more detail in the [features README](../features/README.md) but tags are very helpful for organising your tests so it is advised that you ensure all tests are tagged. If this is left blank OTTO will run **ALL** the feature file scenarios.
+This field is where you define the Cucumber tags to be tested. These must be in the format `-t\\@<tag_name>` in order to work. Adding tags is discussed in more detail in the [features README](../features/README.md) but tags are very helpful for organising your tests so it is advised that you ensure all tests are tagged. If this is left blank oTTo will run **ALL** the feature file scenarios.
 
 
 ### `DRIVER`
