@@ -27,7 +27,7 @@ There are also many other ways that we have not thought of, so if you have an id
 
 ## **Ground Rules and Expectations**
 
-A few things that expect from you, and you can expect from others:
+A few things that are expected from you, and you can expect from others:
 
 * Be kind and considerate. Everyone is different and this is a **tool for learning and to help others**. Other people will not have the same experience or knowledge as you and this is a chance to help and teach those who wish to learn and ask questions.
 * Everything here is done under our [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you agree to abide by its terms
