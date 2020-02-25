@@ -1,8 +1,9 @@
 # **Capybara**
+
 ## **Navigating**
 
 ```ruby
-  visit('/projects') 
+visit('/projects')
   visit(post_comments_path(post))
   current_host
   current_path
@@ -12,9 +13,9 @@
 ## **Clicking links and buttons**
 
 ```ruby
-  click_link('id-of-link') 
-  click_link('Link Text') 
-  click_button('Save') 
+click_link('id-of-link')
+  click_link('Link Text')
+  click_button('Save')
   click('Link Text') # Click either a link or a button
   click('Button Value')
 ```
@@ -22,7 +23,7 @@
 ## **Interacting with forms**
 
 ```ruby
-  fill_in('First Name', :with => 'John')
+fill_in('First Name', :with => 'John')
   fill_in('Password', :with => 'Seekrit')
   fill_in('Description', :with => 'Really Long Text…')
   choose('A Radio Button')
@@ -37,7 +38,7 @@
 ## **Scoping**
 
 ```ruby
-  within("//li[@id='employee']") do
+within("//li[@id='employee']") do
     fill_in 'Name', :with => 'Jimmy'
   end
   within(:css, "li#employee") do
@@ -56,7 +57,7 @@
 ## **Querying**
 
 ```ruby
-  page.has_xpath?('//table/tr')
+page.has_xpath?('//table/tr')
   page.has_css?('table tr.foo')
   page.has_content?('foo')
   page.should have_xpath('//table/tr')
@@ -93,13 +94,13 @@
 ## **Scripting**
 
 ```ruby
-  result = page.evaluate_script('4 + 4');
+result = page.evaluate_script('4 + 4');
 ```
 
 ## **Asynchronous JavaScript**
 
 ```ruby
-  click_link('foo')
+click_link('foo')
   click_link('bar')
   page.should have_content('baz')
   page.should_not have_xpath('//a')
@@ -109,11 +110,11 @@
 ## **XPath and CSS**
 
 ```ruby
-  within(:css, 'ul li') { ... }
+within(:css, 'ul li') { ... }
   find(:css, 'ul li').text
   locate(:css, 'input#name').value
   Capybara.default_selector = :css
   within('ul li') { ... }
   find('ul li').text
   locate('input#name').value
-  ```
+```

@@ -1,8 +1,6 @@
-RSpec Expectations
-==================
+# RSpec Expectations
 
-Built-in matchers
------------------
+## Built-in matchers
 
 ```ruby
 have(n)
@@ -24,7 +22,7 @@ actual.should eql(expected) # passes if actual.eql?(expected)
 actual.should be(expected)    # passes if actual.equal?(expected)
 actual.should equal(expected) # passes if actual.equal?(expected)
 ```
-    
+
 ### Comparisons
 
 ```ruby
@@ -85,22 +83,23 @@ actual.should have_xxx(:arg) # passes if actual.has_xxx?(:arg)
 ```
 
 ### Change
+
 ```ruby
 expect {
-  team.add_player(player) 
+  team.add_player(player)
 }.to change(roster, :count)
 
 expect {
-  team.add_player(player) 
+  team.add_player(player)
 }.to change(roster, :count).by(1)
 
 expect {
-  team.add_player(player) 
+  team.add_player(player)
 }.to change(roster, :count).by_at_least(1)
 
 expect {
   team.add_player(player)
-}.to change(roster, :count).by_at_most(1)    
+}.to change(roster, :count).by_at_most(1)
 
 string = "string"
 expect {
@@ -124,7 +123,6 @@ expect {
   user.symbolize_type
 }.to change(user, :type).from(String).to(Symbol)
 ```
-
 
 ### Ranges (Ruby >= 1.9 only)
 

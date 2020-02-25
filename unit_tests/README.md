@@ -2,18 +2,20 @@
 
 oTTo makes use of RSpec to organise and run unit tests. They are broken into the tests themselves and the specs needed to run them.
 
-In order to keep confidence in the functions listed in the tool, if you add anything new ensure you have added unit tests to cover it. For example, the default functions listed in the [utils](../lib/utils.rb) all have corresponding unit test specs and tests (apart from *add_screenshot* and *add_browser_logs* which are tested as part of the normal process of operation and have been excluded)
+In order to keep confidence in the functions listed in the tool, if you add anything new ensure you have added unit tests to cover it. For example, the default functions listed in the [utils](../lib/utils.rb) all have corresponding unit test specs and tests (apart from _add_screenshot_ and _add_browser_logs_ which are tested as part of the normal process of operation and have been excluded)
 
 If you are contributing to oTTo any new functions must have unit tests and pull requests will be rejected unless they are present or have a good reason not to.
 
-
 ## Running unit tests
+
 In order to run unit all unit tests you can use
+
 ```ruby
 rake unit
 ```
 
 Or if you wish to run only one spec (if you are working on one for example) then you can use
+
 ```ruby
 rspec <path_to_spec>
 ```
@@ -48,7 +50,7 @@ module PercentOf
 end
 ```
 
-This module contains 3 tests - *valid_percent_of_large*, *valid_percent_of_small* and *null_percent_of*. These use the function we have called *percent_of* and injects values into our arguments (or nothing in the case of null).
+This module contains 3 tests - _valid_percent_of_large_, _valid_percent_of_small_ and _null_percent_of_. These use the function we have called _percent_of_ and injects values into our arguments (or nothing in the case of null).
 
 The next step is to create our spec file. This is where we list our expectations.
 
@@ -74,9 +76,9 @@ begin
 end
 ```
 
-Here you can see that we have described our expectations with a useful and human readable name and then proceeded to list out the expected outcome i.e. that the test *valid_percent_of_large* from the module *PercentOf* will equal 1.00%.
+Here you can see that we have described our expectations with a useful and human readable name and then proceeded to list out the expected outcome i.e. that the test _valid_percent_of_large_ from the module _PercentOf_ will equal 1.00%.
 
-We also have an example of the null argument test where we expect an error to be raised - in this case an *ArgumentError*. 
+We also have an example of the null argument test where we expect an error to be raised - in this case an _ArgumentError_.
 
 There are more format related unit tests in the actual file so it is worth looking it over before diving into more test writing.
 
@@ -109,4 +111,5 @@ In this case our RSpec files require the use of `json` gem and is only testing t
 If you write new test files then they need to be added to this list otherwise they will not be seen by the spec files and then the tests will not run correctly.
 
 ## Useful tips
-* It can be helpful to create a new file like the *unit_test_helper* per file you want to test. This can make things cleaner and clearer, but you must remember to `require '<path_to_your_new_file>'` at the head of your spec.
+
+- It can be helpful to create a new file like the _unit_test_helper_ per file you want to test. This can make things cleaner and clearer, but you must remember to `require '<path_to_your_new_file>'` at the head of your spec.

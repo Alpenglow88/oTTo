@@ -1,10 +1,9 @@
-
 # **[Capybara Extensions](https://github.com/DavyJonesLocker/capybara-extensions)**
 
 ## **Finders**
 
 ```ruby
-  # Find an HTML article based on the given arguments.
+# Find an HTML article based on the given arguments.
   #
   # @param args [String] text contained within the article sought.
   # @param args [Object] the object whose article is sought.
@@ -295,7 +294,7 @@
 
   # When scoped to a table, find the first HTML tr on the page matching the given arguments. If passed a negative number, it will find the first tr from the bottom of the table (so row_number(-1) finds the last row in the table).
   #
-  # @param number [Integer] the nth tr element sought 
+  # @param number [Integer] the nth tr element sought
   # @return [Capybara::Element] the found element.
   #
   def row_number(number)
@@ -349,9 +348,8 @@
 end
 ```
 
-## **[Capybara Extensions](https://github.com/DavyJonesLocker/capybara-extensions)**
-
 ## **Locators**
+
 ```ruby
 # Builds a locator via the given src or alt.
   #
@@ -400,7 +398,6 @@ end
   end
 end
 ```
-## **[Capybara Extensions](https://github.com/DavyJonesLocker/capybara-extensions)**
 
 ## **Matchers**
 
@@ -474,4 +471,3 @@ end
   end
 end
 ```
-

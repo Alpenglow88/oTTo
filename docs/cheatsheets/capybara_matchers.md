@@ -1,4 +1,4 @@
-## **Capybara Matchers**
+# **Capybara Matchers**
 
 ```ruby
 expect(page).to have_content("Some Content")
