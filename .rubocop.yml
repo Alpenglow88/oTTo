@@ -10,7 +10,6 @@ AllCops:
     - './lib/site_prism.rb'
     - './features/step_definitions/test.rb'
     - './lib/email_reports.rb'
-  
 
 Layout/MultilineAssignmentLayout:
   Enabled: true
@@ -59,7 +58,7 @@ Style/ClassAndModuleChildren:
 
 Style/DocumentationMethod:
   Enabled: true
-    
+
 Style/GuardClause:
   Enabled: false
 
@@ -68,10 +67,18 @@ Style/InlineComment:
 
 Style/IpAddresses:
   Enabled: true
-  
+
 Style/MixinUsage:
   Enabled: false
 
 Style/NumericPredicate:
   Enabled: false
-  
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true

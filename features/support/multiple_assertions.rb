@@ -4,7 +4,7 @@ module MultipleAssertion
   # A Class which allows RSpec expect blocks to go through the whole block before failing - speeding up debug/fixes
   class CustomExceptions < RSpec::Expectations::ExpectationTarget
     attr_accessor :error_message
-    @@error_message = [] # rubocop:disable ClassVars
+    @@error_message = [] # rubocop:disable Style/ClassVars
 
     # Basically using RSpec's `.to` method here
     def to(matcher = nil, message = nil, &block)
@@ -25,7 +25,7 @@ module MultipleAssertion
 
     # Clears the error message afresh
     def self.reset_error_message
-      @@error_message = [] # rubocop:disable ClassVars
+      @@error_message = [] # rubocop:disable Style/ClassVars
     end
 
     # Joins all the error messages together after iterating through

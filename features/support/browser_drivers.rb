@@ -38,6 +38,7 @@ end
 Capybara.register_driver :headless_chrome do |app|
   browser_options = ::Selenium::WebDriver::Chrome::Options.new
   browser_options.add_argument('--autoplay-policy=no-user-gesture-required')
+  browser_options.add_argument('--headless')
   browser_options.add_argument('--no-sandbox')
   browser_options.add_argument('--disable-dev-shm-usage')
   Capybara::Selenium::Driver.new(
