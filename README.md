@@ -45,7 +45,7 @@ To automatically install all components for oTTo
 
 ### **Manual Installation**
 
-You will need to get the specified version of Ruby (currently v2.6.0) as well as installing [RVM](https://rvm.io/rvm/about) for version ruby management.
+You will need to get the specified version of Ruby (currently v2.6.0) as well as installing [RVM](https://rvm.io/rvm/about) for Ruby version management.
 
 You will also need to install all the additional [RubyGems](https://guides.rubygems.org/) listed in the `Gemfile` using the `bundler` gem built in to Ruby. This will generate a `Gemfile.lock` and this will set all the Gem versions for your project. **Do not delete** this unless you plan to update.
 
@@ -144,3 +144,4 @@ Contributors:
 - [Jullian Tellez](https://github.com/juliantellez)
 - [Kieren Brown](https://github.com/kj-brown)
 - Adam Vincent
+- [Joseph Hughes](https://github.com/CommodoreBeard)
