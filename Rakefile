@@ -24,7 +24,7 @@ end
 
 desc 'Generation of HTML report from testreport.json'
 task :report do
-  puts 'report'
+  Kernel.puts 'report'
   ruby report_builder
 end
 

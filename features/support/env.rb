@@ -64,7 +64,7 @@ Capybara::Screenshot.autosave_on_failure = true
 Capybara::Screenshot.prune_strategy = :keep_last_run
 After do |scenario|
   time = Time.now.getutc
-  puts time
+  log(time)
   add_screenshot if scenario.failed?
   # add_browser_logs if LOGS
 end
@@ -76,7 +76,7 @@ end
 
 #   if errors.present?
 #     message = errors.map(&:message).join("\n\n")
-#     puts message
+#     logs(message)
 #     File.open("console_logs_#{Date.today}_#{ENVIRONMENT}_#{DRIVER}.js", 'a') do |f|
 #       f.write("#{time} \n #{scenario} \n #{step} \n #{message}\n")
 #     end
