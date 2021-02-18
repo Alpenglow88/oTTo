@@ -12,8 +12,7 @@ module Utils
     file_path = 'screenshot.png'
     page.driver.browser.save_screenshot(file_path)
     image = File.open(file_path, 'rb', &:read)
-    encoded_image = Base64.encode64(image)
-    embed(encoded_image, 'image/png;base64', 'SCREENSHOT')
+    attach(image, 'image/png')
   end
 
   # Create and store browser logs

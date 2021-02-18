@@ -6,7 +6,7 @@
 # I want to see my example feature file for use with BDD scenarios in Gherkin language syntax
 
 # Background: 
-#     Given I open the website 'https://www.google.com'
+#     Given I open the 'home' page URL
     
 # @test
 # Scenario: Get a search results value back from Google
