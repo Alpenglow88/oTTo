@@ -85,6 +85,20 @@ and if you have anything other than than version you installed in the setup abov
 brew uninstall ruby
 ```
 
+You will also need to ensure that you have installed Cucumber Standalone JSON Formatter as per their instructions on the Github page
+
+```
+https://github.com/cucumber/cucumber/tree/master/json-formatter#cucumber-json-formatter
+```
+
+If you do not install this correctly then you will fall into trouble with the reporting element of this tool.
+
+For adding to your `PATH`, this page may be of some help
+
+```
+https://www.architectryan.com/2012/10/02/add-to-the-path-on-mac-os-x-mountain-lion/
+```
+
 ## **Basic Usage**
 
 The basic usage of oTTo is running a single script, `scripts/test.sh`. This is a bash script and is run from the home directory using
@@ -110,7 +124,7 @@ This task is responsible for actually running the testing. It is constructed usi
 It uses the test.sh script to construct a Cucumber syntax command. The `options` are the specific tags to be run and the `default` text is to output a json file of results used by the report builder as well as a text file designed to keep track of failed test items. This constructs and runs the command
 
 ```gherkin
-cucumber -t <tag> --format pretty --expand --format json -o '<output_file>.json' -f rerun --out rerun.txt
+cucumber -t <tag> --format pretty --expand --format=message -o 'test_report.ndjson' -f rerun --out rerun.txt --publish-quiet
 ```
 
 Alternative Cucumber commands can be added to this file in this format if you wish to.
@@ -120,7 +134,7 @@ Alternative Cucumber commands can be added to this file in this format if you wi
 This is very similar to `rake test` however, as you would expect, it runs the failed tests from the initial run. It requires you to have already run `rake test`, or at least have a `rerun.txt` file available with failures listed, as this is where it draws from instead of Cucumber tags. It constructs and runs the command
 
 ```gherkin
-cucumber @rerun.txt --format pretty --expand --format json -o 'rerunreport.json'
+cucumber @rerun.txt --format pretty --expand --format=message -o 'retest_report.ndjson' --publish-quiet'
 ```
 
 ### `rake report`
