@@ -7,8 +7,11 @@ coverage
 *.zip
 *.png
 screenshot.png
-test_report.json
+testreport.json
+test_report.ndjson
 rerunreport.json
+retestreport.json
+retest_report.ndjson
 reports*
 DONOTINCLUDE.RB
 test.rb

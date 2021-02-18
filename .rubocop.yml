@@ -5,11 +5,17 @@
 AllCops:
   TargetRubyVersion: 2.6
   Exclude:
+    - './DONOTINCLUDE.example.rb'
+    - './DONOTINCLUDE.rb'
     - './test.rb'
     - './lib/site_prism/*'
     - './lib/site_prism.rb'
     - './features/step_definitions/test.rb'
-    - './lib/email_reports.rb'
+    - './tokentmp.rb'
+    - './vod_asset_id.rb'
+    - './initial_timecode_tmp.rb'
+    - './testtokentmp.rb'
+  
 
 Layout/MultilineAssignmentLayout:
   Enabled: true
@@ -31,14 +37,16 @@ Metrics/CyclomaticComplexity:
   Enabled: false
   Max: 6
 
-Metrics/LineLength:
+Layout/LineLength:
   Enabled: false
 
 Metrics/MethodLength:
-  Max: 30
+  Max: 50
   CountComments: false
 
 Metrics/ModuleLength:
+  Exclude:
+    - './unit_tests/**/*.rb*'
   Enabled: true
   Max: 120
   CountComments: false
@@ -59,6 +67,9 @@ Style/ClassAndModuleChildren:
 Style/DocumentationMethod:
   Enabled: true
 
+Style/FormatStringToken:
+  Enabled: false
+    
 Style/GuardClause:
   Enabled: false
 
@@ -67,18 +78,9 @@ Style/InlineComment:
 
 Style/IpAddresses:
   Enabled: true
-
+  
 Style/MixinUsage:
   Enabled: false
 
 Style/NumericPredicate:
-  Enabled: false
-
-Style/HashEachMethods:
-  Enabled: true
-
-Style/HashTransformKeys:
-  Enabled: true
-
-Style/HashTransformValues:
-  Enabled: true
+  Enabled: false  

@@ -1,4 +1,4 @@
-export HOST="" # URL of testing
+export HOST="https://otto-test-site.herokuapp.com/" # URL of testing
 export USERNAME="" # Username for login if required
 export PASSWORD="" # Password for login if required
 export OPTIONS="" # Options to test. Needs to be in format '-t\\@<TAG>' 
@@ -19,8 +19,10 @@ PLUGIN_OUTPUT_FILE_TITLE=$OUTPUT_FILE_TITLE
 PLAYER_SANDBOX_PATH="..."
 
 rake test
-rake rerun
-rake report
+# rake rerun
+# cat test_report.ndjson | cucumber-json-formatter --format ndjson > testreport.json
+# cat retest_report.ndjson | cucumber-json-formatter --format ndjson > retestreport.json
+# rake report
 
 # docker run \
 #     --volume $<path>:$PLUGIN_LOCAL_PATH \
