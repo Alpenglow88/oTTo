@@ -3,6 +3,7 @@
 # require: rubocop-performance
 
 AllCops:
+  NewCops: enable
   TargetRubyVersion: 2.6
   Exclude:
     - './DONOTINCLUDE.example.rb'

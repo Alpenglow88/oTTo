@@ -63,4 +63,4 @@ gem 'site_prism'
 # Keep your Selenium WebDrivers updated automatically  [https://github.com/titusfortner/webdrivers]
 gem 'webdrivers'
 
-gem "nokogiri", ">= 1.10.8"
+gem 'nokogiri', '>= 1.10.8'

@@ -11,3 +11,7 @@ end
 When('I send the enter key to search Google') do
   test_divs.google_search_bar.send_keys :enter
 end
+
+When('I click on the landing page image') do
+  LandingPage.landing_page_image.click
+end

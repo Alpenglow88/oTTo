@@ -17,3 +17,7 @@ Then('The page title is {string}') do |string|
   log(page.title)
   expect(page.title).to eq(string)
 end
+
+Then('I can see the landing page image') do
+  expect(LandingPage).to have_landing_page_image
+end

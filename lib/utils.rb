@@ -22,7 +22,7 @@ module Utils
     current_url = Capybara.current_url.to_s
     # Gather browser logs
     logs = page.driver.browser.manage.logs.get(:browser).map { |line| [line.level, line.message] }
-    embed(time_now.strftime('%Y-%m-%d-%H-%M-%S' + "\n") + ('Current URL: ' + current_url + "\n") + logs.join("\n"), 'text/plain', 'BROWSER ERROR')
+    embed(time_now.strftime("%Y-%m-%d-%H-%M-%S\n") + "Current URL: #{current_url}\n" + logs.join("\n"), 'text/plain', 'BROWSER ERROR')
   end
 
   # Take number and work out it as a percentage of the argument total

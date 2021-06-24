@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require '/Users/iangoddard/Desktop/oTTo/features/pages/landing_page'
+# require '/Users/iangoddard/Desktop/oTTo/features/pages/landing_page'
 
 Given('I open the website {string}') do |string|
   visit string.to_s

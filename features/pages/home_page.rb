@@ -1,9 +1,9 @@
 #  frozen_string_literal: true
 
 # Main testing page with elements expected to be found
-class HomePage < SitePrism::Page
+class Home < SitePrism::Page
   set_url "#{HOST}index"
   element :home_page_image, '[data_test_automation_id=otto_logo]'
 end
 
-HomePage = HomePage.new
+HomePage = Home.new

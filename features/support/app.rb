@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'require_all'
-require 'lib/site_prism/site_prism_sub.rb'
+require 'lib/site_prism/site_prism_sub'
 
 require_all 'pages/*.rb'
 
