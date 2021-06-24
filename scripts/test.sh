@@ -19,10 +19,10 @@ PLUGIN_OUTPUT_FILE_TITLE=$OUTPUT_FILE_TITLE
 PLAYER_SANDBOX_PATH="..."
 
 rake test
-# rake rerun
-# cat test_report.ndjson | cucumber-json-formatter --format ndjson > testreport.json
-# cat retest_report.ndjson | cucumber-json-formatter --format ndjson > retestreport.json
-# rake report
+rake rerun
+cat test_report.ndjson | cucumber-json-formatter --format ndjson > testreport.json
+cat retest_report.ndjson | cucumber-json-formatter --format ndjson > retestreport.json
+rake report
 
 # docker run \
 #     --volume $<path>:$PLUGIN_LOCAL_PATH \
