@@ -99,7 +99,7 @@ fi
 # RVM
 # -----------------------------------------------------------------------------
 if [ -x rvm ]; then
-	step "Installing RVM with latest stable Ruby..."
+	step "Installing RVM with Ruby 2.6.0..."
 	 curl -L https://get.rvm.io | bash -s stable --ruby
 	print_success "RVM installed!"
 	step "Installing 2.6.0 Ruby..."
