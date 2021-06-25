@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '2.6.0'
+# ruby '2.6.0'
 
 # A toolkit of support libraries and Ruby core extensions extracted from the Rails framework. Rich support for multibyte strings, internationalization, time zones, and testing.
 gem 'activesupport'
@@ -17,7 +17,7 @@ gem 'capybara-extensions'
 gem 'capybara-screenshot'
 
 # Compact language detection
-gem 'cld2', require: 'cld', git: 'https://github.com/Alpenglow88/cld2.git'
+# gem 'cld2', require: 'cld', git: 'https://github.com/Alpenglow88/cld2.git'
 
 # Behaviour Driven Development with elegance and joy [https://cucumber.io/]
 gem 'cucumber'
@@ -57,7 +57,7 @@ gem 'selenium-webdriver', '3.142.3'
 # Code coverage for Ruby 1.9+ with a powerful configuration library and automatic merging of coverage across test suites [https://github.com/colszowka/simplecov]
 gem 'simplecov'
 
-# A Page Object Model DSL for Capybara [https://github.com/natritmeyer/site_prism]
+# A Page Object Model DSL for Capybara [https://github.com/site-prism/site_prism]
 gem 'site_prism'
 
 # Keep your Selenium WebDrivers updated automatically  [https://github.com/titusfortner/webdrivers]
