@@ -49,6 +49,8 @@ You will need to get the specified version of Ruby (currently v2.6.0) as well as
 
 You will also need to install all the additional [RubyGems](https://guides.rubygems.org/) listed in the `Gemfile` using the `bundler` gem built in to Ruby. This will generate a `Gemfile.lock` and this will set all the Gem versions for your project. **Do not delete** this unless you plan to update.
 
+Currently oTTo supports all Ruby v2.X.x. Ruby 3 is not currently supported but it is planned to be!
+
 ```bash
 curl -L https://get.rvm.io | bash -s stable
 rvm install 2.6.0 # new shell
