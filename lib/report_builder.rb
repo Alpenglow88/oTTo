@@ -8,7 +8,7 @@ time = Time.now.getutc
 
 ReportBuilder.configure do |config|
   config.json_path = 'testreport.json'
-  config.report_path = "#{OUTPUT_FILE}_#{time}"
+  config.report_path = "./reports/#{OUTPUT_FILE}_#{time}"
   config.report_types = [:html]
   config.report_tabs = %w[Overview Features Scenarios Errors]
   config.report_title = "#{OUTPUT_FILE_TITLE}_#{time}"
@@ -19,7 +19,7 @@ ReportBuilder.build_report
 
 ReportBuilder.configure do |config|
   config.json_path = 'retestreport.json'
-  config.report_path = "#{RERUN_OUTPUT_FILE}_#{time}"
+  config.report_path = "./reports/#{RERUN_OUTPUT_FILE}_#{time}"
   config.report_types = [:html]
   config.report_tabs = %w[Overview Features Scenarios Errors]
   config.report_title = "#{RERUN_OUTPUT_FILE_TITLE}_#{time}"

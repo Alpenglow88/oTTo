@@ -12,7 +12,7 @@ test_report.ndjson
 rerunreport.json
 retestreport.json
 retest_report.ndjson
-reports*
+reports/*
 DONOTINCLUDE.RB
 test.rb
 features/step_definitions/test.rb

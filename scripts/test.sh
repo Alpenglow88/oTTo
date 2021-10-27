@@ -23,17 +23,3 @@ rake rerun
 cat test_report.ndjson | cucumber-json-formatter --format ndjson > testreport.json
 cat retest_report.ndjson | cucumber-json-formatter --format ndjson > retestreport.json
 rake report
-
-# docker run \
-#     --volume $<path>:$PLUGIN_LOCAL_PATH \
-#     -e PLUGIN_LOCAL_PATH \
-#     -e PLUGIN_USERNAME \
-#     -e PLUGIN_PASSWORD_TESTING \
-#     -e PLUGIN_PASSWORD_STAGING \
-#     -e PLUGIN_HOST \
-#     -e PLUGIN_OPTIONS \
-#     -e PLUGIN_DRIVER \
-#     -e PLUGIN_OUTPUT_FILE \
-#     -e PLUGIN_OUTPUT_FILE_TITLE \
-#     -it <name>/<name>:1 \
-#     /bin/sh

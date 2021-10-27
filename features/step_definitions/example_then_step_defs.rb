@@ -21,3 +21,7 @@ end
 Then('I can see the landing page image') do
   expect(LandingPage).to have_landing_page_image
 end
+
+Then('I am taken to the home page') do
+  expect(4).to eq(5)
+end
